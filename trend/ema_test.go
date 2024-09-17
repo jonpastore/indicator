@@ -1,6 +1,6 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 package trend_test
 
@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cinar/indicator/v2/helper"
-	"github.com/cinar/indicator/v2/trend"
+	"github.com/jonpastore/indicator/v2/helper"
+	"github.com/jonpastore/indicator/v2/trend"
 )
 
 // Testing against the example at URL:

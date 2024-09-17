@@ -6,7 +6,7 @@
 
 Thank you for your interest in contributing to Indicator Project's Indicator Go ("We" or "Us").
 
-The purpose of this contributor agreement ("Agreement") is to clarify and document the rights granted by contributors to Us. To make this document effective, please follow the instructions at [](https://github.com/cinar/indicator/blob/master/CLA.md).
+The purpose of this contributor agreement ("Agreement") is to clarify and document the rights granted by contributors to Us. To make this document effective, please follow the instructions at [](https://github.com/jonpastore/indicator/blob/master/CLA.md).
 
 ### How to use this Contributor Agreement
 

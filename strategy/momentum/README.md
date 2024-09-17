@@ -3,7 +3,7 @@
 # momentum
 
 ```go
-import "github.com/cinar/indicator/v2/strategy/momentum"
+import "github.com/jonpastore/indicator/v2/strategy/momentum"
 ```
 
 Package momentum contains the momentum strategy functions.
@@ -15,7 +15,7 @@ This package belongs to the Indicator project. Indicator is a Golang module that
 ```
 Copyright (c) 2021-2024 Onur Cinar.
 The source code is provided under GNU AGPLv3 License.
-https://github.com/cinar/indicator
+https://github.com/jonpastore/indicator
 ```
 
 ### Disclaimer
@@ -103,7 +103,7 @@ const (
 ```
 
 <a name="AllStrategies"></a>
-## func [AllStrategies](<https://github.com/cinar/indicator/blob/master/strategy/momentum/momentum.go#L24>)
+## func [AllStrategies](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/momentum.go#L24>)
 
 ```go
 func AllStrategies() []strategy.Strategy
@@ -112,7 +112,7 @@ func AllStrategies() []strategy.Strategy
 AllStrategies returns a slice containing references to all available momentum strategies.
 
 <a name="AwesomeOscillatorStrategy"></a>
-## type [AwesomeOscillatorStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L15-L18>)
+## type [AwesomeOscillatorStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L15-L18>)
 
 AwesomeOscillatorStrategy represents the configuration parameters for calculating the Awesome Oscillator strategy.
 
@@ -124,7 +124,7 @@ type AwesomeOscillatorStrategy struct {
 ```
 
 <a name="NewAwesomeOscillatorStrategy"></a>
-### func [NewAwesomeOscillatorStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L21>)
+### func [NewAwesomeOscillatorStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L21>)
 
 ```go
 func NewAwesomeOscillatorStrategy() *AwesomeOscillatorStrategy
@@ -133,7 +133,7 @@ func NewAwesomeOscillatorStrategy() *AwesomeOscillatorStrategy
 NewAwesomeOscillatorStrategy function initializes a new Awesome Oscillator strategy with the default parameters.
 
 <a name="AwesomeOscillatorStrategy.Compute"></a>
-### func \(\*AwesomeOscillatorStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L33>)
+### func \(\*AwesomeOscillatorStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L33>)
 
 ```go
 func (a *AwesomeOscillatorStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -142,7 +142,7 @@ func (a *AwesomeOscillatorStrategy) Compute(snapshots <-chan *asset.Snapshot) <-
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="AwesomeOscillatorStrategy.Name"></a>
-### func \(\*AwesomeOscillatorStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L28>)
+### func \(\*AwesomeOscillatorStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L28>)
 
 ```go
 func (*AwesomeOscillatorStrategy) Name() string
@@ -151,7 +151,7 @@ func (*AwesomeOscillatorStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="AwesomeOscillatorStrategy.Report"></a>
-### func \(\*AwesomeOscillatorStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L60>)
+### func \(\*AwesomeOscillatorStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/awesome_oscillator_strategy.go#L60>)
 
 ```go
 func (a *AwesomeOscillatorStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
@@ -160,7 +160,7 @@ func (a *AwesomeOscillatorStrategy) Report(c <-chan *asset.Snapshot) *helper.Rep
 Report processes the provided asset snapshots and generates a report annotated with the recommended actions.
 
 <a name="RsiStrategy"></a>
-## type [RsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/rsi_strategy.go#L25-L34>)
+## type [RsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/rsi_strategy.go#L25-L34>)
 
 RsiStrategy represents the configuration parameters for calculating the RSI strategy.
 
@@ -178,7 +178,7 @@ type RsiStrategy struct {
 ```
 
 <a name="NewRsiStrategy"></a>
-### func [NewRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/rsi_strategy.go#L37>)
+### func [NewRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/rsi_strategy.go#L37>)
 
 ```go
 func NewRsiStrategy() *RsiStrategy
@@ -187,7 +187,7 @@ func NewRsiStrategy() *RsiStrategy
 NewRsiStrategy function initializes a new RSI strategy instance with the default parameters.
 
 <a name="NewRsiStrategyWith"></a>
-### func [NewRsiStrategyWith](<https://github.com/cinar/indicator/blob/master/strategy/momentum/rsi_strategy.go#L45>)
+### func [NewRsiStrategyWith](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/rsi_strategy.go#L45>)
 
 ```go
 func NewRsiStrategyWith(buyAt, sellAt float64) *RsiStrategy
@@ -196,7 +196,7 @@ func NewRsiStrategyWith(buyAt, sellAt float64) *RsiStrategy
 NewRsiStrategyWith function initializes a new RSI strategy instance with the given parameters.
 
 <a name="RsiStrategy.Compute"></a>
-### func \(\*RsiStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/momentum/rsi_strategy.go#L59>)
+### func \(\*RsiStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/rsi_strategy.go#L59>)
 
 ```go
 func (r *RsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -205,7 +205,7 @@ func (r *RsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="RsiStrategy.Name"></a>
-### func \(\*RsiStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/momentum/rsi_strategy.go#L54>)
+### func \(\*RsiStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/rsi_strategy.go#L54>)
 
 ```go
 func (r *RsiStrategy) Name() string
@@ -214,7 +214,7 @@ func (r *RsiStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="RsiStrategy.Report"></a>
-### func \(\*RsiStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/momentum/rsi_strategy.go#L83>)
+### func \(\*RsiStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/rsi_strategy.go#L83>)
 
 ```go
 func (r *RsiStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
@@ -223,7 +223,7 @@ func (r *RsiStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
 Report processes the provided asset snapshots and generates a report annotated with the recommended actions.
 
 <a name="StochasticRsiStrategy"></a>
-## type [StochasticRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L25-L34>)
+## type [StochasticRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L25-L34>)
 
 StochasticRsiStrategy represents the configuration parameters for calculating the Stochastic RSI strategy.
 
@@ -241,7 +241,7 @@ type StochasticRsiStrategy struct {
 ```
 
 <a name="NewStochasticRsiStrategy"></a>
-### func [NewStochasticRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L37>)
+### func [NewStochasticRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L37>)
 
 ```go
 func NewStochasticRsiStrategy() *StochasticRsiStrategy
@@ -250,7 +250,7 @@ func NewStochasticRsiStrategy() *StochasticRsiStrategy
 NewStochasticRsiStrategy function initializes a new Stochastic RSI strategy instance with the default parameters.
 
 <a name="NewStochasticRsiStrategyWith"></a>
-### func [NewStochasticRsiStrategyWith](<https://github.com/cinar/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L45>)
+### func [NewStochasticRsiStrategyWith](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L45>)
 
 ```go
 func NewStochasticRsiStrategyWith(buyAt, sellAt float64) *StochasticRsiStrategy
@@ -259,7 +259,7 @@ func NewStochasticRsiStrategyWith(buyAt, sellAt float64) *StochasticRsiStrategy
 NewStochasticRsiStrategyWith function initializes a new Stochastic RSI strategy instance with the given parameters.
 
 <a name="StochasticRsiStrategy.Compute"></a>
-### func \(\*StochasticRsiStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L59>)
+### func \(\*StochasticRsiStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L59>)
 
 ```go
 func (s *StochasticRsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -268,7 +268,7 @@ func (s *StochasticRsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="StochasticRsiStrategy.Name"></a>
-### func \(\*StochasticRsiStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L54>)
+### func \(\*StochasticRsiStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L54>)
 
 ```go
 func (s *StochasticRsiStrategy) Name() string
@@ -277,7 +277,7 @@ func (s *StochasticRsiStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="StochasticRsiStrategy.Report"></a>
-### func \(\*StochasticRsiStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L83>)
+### func \(\*StochasticRsiStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/stochastic_rsi_strategy.go#L83>)
 
 ```go
 func (s *StochasticRsiStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
@@ -286,7 +286,7 @@ func (s *StochasticRsiStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
 Report processes the provided asset snapshots and generates a report annotated with the recommended actions.
 
 <a name="TripleRsiStrategy"></a>
-## type [TripleRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L50-L68>)
+## type [TripleRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L50-L68>)
 
 TripleRsiStrategy represents the configuration parameters for calculating the Triple RSI strategy. It assumes that the moving average period is longer than the RSI period.
 
@@ -319,7 +319,7 @@ type TripleRsiStrategy struct {
 ```
 
 <a name="NewTripleRsiStrategy"></a>
-### func [NewTripleRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L71>)
+### func [NewTripleRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L71>)
 
 ```go
 func NewTripleRsiStrategy() *TripleRsiStrategy
@@ -328,7 +328,7 @@ func NewTripleRsiStrategy() *TripleRsiStrategy
 NewTripleRsiStrategy function initializes a new Triple RSI strategy instance with the default parameters.
 
 <a name="NewTripleRsiStrategyWith"></a>
-### func [NewTripleRsiStrategyWith](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L83>)
+### func [NewTripleRsiStrategyWith](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L83>)
 
 ```go
 func NewTripleRsiStrategyWith(period, smaPeriod, downDays int, buySignalAt, buyAt, sellAt float64) *TripleRsiStrategy
@@ -337,7 +337,7 @@ func NewTripleRsiStrategyWith(period, smaPeriod, downDays int, buySignalAt, buyA
 NewTripleRsiStrategyWith function initializes a new RSI strategy instance with the given parameters.
 
 <a name="TripleRsiStrategy.Compute"></a>
-### func \(\*TripleRsiStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L106>)
+### func \(\*TripleRsiStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L106>)
 
 ```go
 func (t *TripleRsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -346,7 +346,7 @@ func (t *TripleRsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan str
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="TripleRsiStrategy.IdlePeriod"></a>
-### func \(\*TripleRsiStrategy\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L101>)
+### func \(\*TripleRsiStrategy\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L101>)
 
 ```go
 func (t *TripleRsiStrategy) IdlePeriod() int
@@ -355,7 +355,7 @@ func (t *TripleRsiStrategy) IdlePeriod() int
 IdlePeriod is the initial period that the Triple RSI strategy won't yield any results.
 
 <a name="TripleRsiStrategy.Name"></a>
-### func \(\*TripleRsiStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L95>)
+### func \(\*TripleRsiStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L95>)
 
 ```go
 func (t *TripleRsiStrategy) Name() string
@@ -364,7 +364,7 @@ func (t *TripleRsiStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="TripleRsiStrategy.Report"></a>
-### func \(\*TripleRsiStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L168>)
+### func \(\*TripleRsiStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/momentum/triple_rsi_strategy.go#L168>)
 
 ```go
 func (t *TripleRsiStrategy) Report(c <-chan *asset.Snapshot) *helper.Report

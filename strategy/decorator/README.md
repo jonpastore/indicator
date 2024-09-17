@@ -3,7 +3,7 @@
 # decorator
 
 ```go
-import "github.com/cinar/indicator/v2/strategy/decorator"
+import "github.com/jonpastore/indicator/v2/strategy/decorator"
 ```
 
 Package decorator contains the decorator strategy functions.
@@ -15,7 +15,7 @@ This package belongs to the Indicator project. Indicator is a Golang module that
 ```
 Copyright (c) 2021-2024 Onur Cinar.
 The source code is provided under GNU AGPLv3 License.
-https://github.com/cinar/indicator
+https://github.com/jonpastore/indicator
 ```
 
 ### Disclaimer
@@ -42,7 +42,7 @@ The information provided on this project is strictly for informational purposes 
 
 
 <a name="InverseStrategy"></a>
-## type [InverseStrategy](<https://github.com/cinar/indicator/blob/master/strategy/decorator/inverse_strategy.go#L17-L20>)
+## type [InverseStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/inverse_strategy.go#L17-L20>)
 
 InverseStrategy reverses the advice of another strategy. For example, if the original strategy suggests buying an asset, InverseStrategy would recommend selling it.
 
@@ -54,7 +54,7 @@ type InverseStrategy struct {
 ```
 
 <a name="NewInverseStrategy"></a>
-### func [NewInverseStrategy](<https://github.com/cinar/indicator/blob/master/strategy/decorator/inverse_strategy.go#L23>)
+### func [NewInverseStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/inverse_strategy.go#L23>)
 
 ```go
 func NewInverseStrategy(innerStrategy strategy.Strategy) *InverseStrategy
@@ -63,7 +63,7 @@ func NewInverseStrategy(innerStrategy strategy.Strategy) *InverseStrategy
 NewInverseStrategy function initializes a new inverse strategy instance.
 
 <a name="InverseStrategy.Compute"></a>
-### func \(\*InverseStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/decorator/inverse_strategy.go#L35>)
+### func \(\*InverseStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/inverse_strategy.go#L35>)
 
 ```go
 func (i *InverseStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -72,7 +72,7 @@ func (i *InverseStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strat
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="InverseStrategy.Name"></a>
-### func \(\*InverseStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/decorator/inverse_strategy.go#L30>)
+### func \(\*InverseStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/inverse_strategy.go#L30>)
 
 ```go
 func (i *InverseStrategy) Name() string
@@ -81,7 +81,7 @@ func (i *InverseStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="InverseStrategy.Report"></a>
-### func \(\*InverseStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/decorator/inverse_strategy.go#L51>)
+### func \(\*InverseStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/inverse_strategy.go#L51>)
 
 ```go
 func (i *InverseStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
@@ -90,7 +90,7 @@ func (i *InverseStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
 Report processes the provided asset snapshots and generates a report annotated with the recommended actions.
 
 <a name="NoLossStrategy"></a>
-## type [NoLossStrategy](<https://github.com/cinar/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L17-L20>)
+## type [NoLossStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L17-L20>)
 
 NoLossStrategy prevents selling an asset at a loss. It modifies the recommendations of another strategy to ensure that the asset is only sold if its value is at or above the original purchase price.
 
@@ -102,7 +102,7 @@ type NoLossStrategy struct {
 ```
 
 <a name="NewNoLossStrategy"></a>
-### func [NewNoLossStrategy](<https://github.com/cinar/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L23>)
+### func [NewNoLossStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L23>)
 
 ```go
 func NewNoLossStrategy(innerStrategy strategy.Strategy) *NoLossStrategy
@@ -111,7 +111,7 @@ func NewNoLossStrategy(innerStrategy strategy.Strategy) *NoLossStrategy
 NewNoLossStrategy function initializes a new no loss strategy instance.
 
 <a name="NoLossStrategy.Compute"></a>
-### func \(\*NoLossStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L35>)
+### func \(\*NoLossStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L35>)
 
 ```go
 func (n *NoLossStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -120,7 +120,7 @@ func (n *NoLossStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strate
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="NoLossStrategy.Name"></a>
-### func \(\*NoLossStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L30>)
+### func \(\*NoLossStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L30>)
 
 ```go
 func (n *NoLossStrategy) Name() string
@@ -129,7 +129,7 @@ func (n *NoLossStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="NoLossStrategy.Report"></a>
-### func \(\*NoLossStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L60>)
+### func \(\*NoLossStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/no_loss_strategy.go#L60>)
 
 ```go
 func (n *NoLossStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
@@ -138,7 +138,7 @@ func (n *NoLossStrategy) Report(c <-chan *asset.Snapshot) *helper.Report
 Report processes the provided asset snapshots and generates a report annotated with the recommended actions.
 
 <a name="StopLossStrategy"></a>
-## type [StopLossStrategy](<https://github.com/cinar/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L16-L22>)
+## type [StopLossStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L16-L22>)
 
 StopLossStrategy prevents a loss by recommending a sell action when the assets drops below the given threshold.
 
@@ -153,7 +153,7 @@ type StopLossStrategy struct {
 ```
 
 <a name="NewStopLossStrategy"></a>
-### func [NewStopLossStrategy](<https://github.com/cinar/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L25>)
+### func [NewStopLossStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L25>)
 
 ```go
 func NewStopLossStrategy(innerStrategy strategy.Strategy, percentage float64) *StopLossStrategy
@@ -162,7 +162,7 @@ func NewStopLossStrategy(innerStrategy strategy.Strategy, percentage float64) *S
 NewStopLossStrategy function initializes a new stop loss strategy instance.
 
 <a name="StopLossStrategy.Compute"></a>
-### func \(\*StopLossStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L38>)
+### func \(\*StopLossStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L38>)
 
 ```go
 func (s *StopLossStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -171,7 +171,7 @@ func (s *StopLossStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan stra
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="StopLossStrategy.Name"></a>
-### func \(\*StopLossStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L33>)
+### func \(\*StopLossStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L33>)
 
 ```go
 func (s *StopLossStrategy) Name() string
@@ -180,7 +180,7 @@ func (s *StopLossStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="StopLossStrategy.Report"></a>
-### func \(\*StopLossStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L63>)
+### func \(\*StopLossStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/decorator/stop_loss_strategy.go#L63>)
 
 ```go
 func (s *StopLossStrategy) Report(c <-chan *asset.Snapshot) *helper.Report

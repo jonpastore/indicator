@@ -3,7 +3,7 @@
 # compound
 
 ```go
-import "github.com/cinar/indicator/v2/strategy/compound"
+import "github.com/jonpastore/indicator/v2/strategy/compound"
 ```
 
 Package compound contains the compound strategy functions.
@@ -15,7 +15,7 @@ This package belongs to the Indicator project. Indicator is a Golang module that
 ```
 Copyright (c) 2021-2024 Onur Cinar.
 The source code is provided under GNU AGPLv3 License.
-https://github.com/cinar/indicator
+https://github.com/jonpastore/indicator
 ```
 
 ### Disclaimer
@@ -49,7 +49,7 @@ const (
 ```
 
 <a name="AllStrategies"></a>
-## func [AllStrategies](<https://github.com/cinar/indicator/blob/master/strategy/compound/compound.go#L24>)
+## func [AllStrategies](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/compound.go#L24>)
 
 ```go
 func AllStrategies() []strategy.Strategy
@@ -58,7 +58,7 @@ func AllStrategies() []strategy.Strategy
 AllStrategies returns a slice containing references to all available compound strategies.
 
 <a name="MacdRsiStrategy"></a>
-## type [MacdRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L26-L32>)
+## type [MacdRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L26-L32>)
 
 MacdRsiStrategy represents the configuration parameters for calculating the MACD\-RSI strategy.
 
@@ -73,7 +73,7 @@ type MacdRsiStrategy struct {
 ```
 
 <a name="NewMacdRsiStrategy"></a>
-### func [NewMacdRsiStrategy](<https://github.com/cinar/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L35>)
+### func [NewMacdRsiStrategy](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L35>)
 
 ```go
 func NewMacdRsiStrategy() *MacdRsiStrategy
@@ -82,7 +82,7 @@ func NewMacdRsiStrategy() *MacdRsiStrategy
 NewMacdRsiStrategy function initializes a new MACD\-RSI strategy instance with the default parameters.
 
 <a name="NewMacdRsiStrategyWith"></a>
-### func [NewMacdRsiStrategyWith](<https://github.com/cinar/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L43>)
+### func [NewMacdRsiStrategyWith](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L43>)
 
 ```go
 func NewMacdRsiStrategyWith(buyAt, sellAt float64) *MacdRsiStrategy
@@ -91,7 +91,7 @@ func NewMacdRsiStrategyWith(buyAt, sellAt float64) *MacdRsiStrategy
 NewMacdRsiStrategyWith function initializes a new MACD\-RSI strategy instance with the given parameters.
 
 <a name="MacdRsiStrategy.Compute"></a>
-### func \(\*MacdRsiStrategy\) [Compute](<https://github.com/cinar/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L59>)
+### func \(\*MacdRsiStrategy\) [Compute](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L59>)
 
 ```go
 func (m *MacdRsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strategy.Action
@@ -100,7 +100,7 @@ func (m *MacdRsiStrategy) Compute(snapshots <-chan *asset.Snapshot) <-chan strat
 Compute processes the provided asset snapshots and generates a stream of actionable recommendations.
 
 <a name="MacdRsiStrategy.Name"></a>
-### func \(\*MacdRsiStrategy\) [Name](<https://github.com/cinar/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L51>)
+### func \(\*MacdRsiStrategy\) [Name](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L51>)
 
 ```go
 func (m *MacdRsiStrategy) Name() string
@@ -109,7 +109,7 @@ func (m *MacdRsiStrategy) Name() string
 Name returns the name of the strategy.
 
 <a name="MacdRsiStrategy.Report"></a>
-### func \(\*MacdRsiStrategy\) [Report](<https://github.com/cinar/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L82>)
+### func \(\*MacdRsiStrategy\) [Report](<https://github.com/jonpastore/indicator/blob/master/strategy/compound/macd_rsi_strategy.go#L82>)
 
 ```go
 func (m *MacdRsiStrategy) Report(c <-chan *asset.Snapshot) *helper.Report

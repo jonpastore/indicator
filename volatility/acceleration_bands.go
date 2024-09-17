@@ -1,12 +1,12 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 package volatility
 
 import (
-	"github.com/cinar/indicator/v2/helper"
-	"github.com/cinar/indicator/v2/trend"
+	"github.com/jonpastore/indicator/v2/helper"
+	"github.com/jonpastore/indicator/v2/trend"
 )
 
 const (

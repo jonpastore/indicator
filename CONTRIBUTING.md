@@ -10,7 +10,7 @@ Anyone is welcome to contribute to the Indicator library. No prior experience is
 
 ### Finding a Bug?
 
-1. Check if the bug has already been reported by searching [Project Issues](https://github.com/cinar/indicator/issues).
+1. Check if the bug has already been reported by searching [Project Issues](https://github.com/jonpastore/indicator/issues).
 2. If no open issue addresses the problem, create a new one.
 3. Use the relevant bug report templates, providing a clear title, detailed description, and, if possible, a code sample or executable test case demonstrating the issue.
 

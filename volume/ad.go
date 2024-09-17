@@ -1,10 +1,10 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 package volume
 
-import "github.com/cinar/indicator/v2/helper"
+import "github.com/jonpastore/indicator/v2/helper"
 
 // Ad holds configuration parameters for calculating Accumulation/Distribution (A/D). It is a cumulative
 // indicator that uses volume and price to assess whether an asset is being accumulated or distributed.

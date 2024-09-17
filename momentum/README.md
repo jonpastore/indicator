@@ -3,7 +3,7 @@
 # momentum
 
 ```go
-import "github.com/cinar/indicator/v2/momentum"
+import "github.com/jonpastore/indicator/v2/momentum"
 ```
 
 Package momentum contains the momentum indicator functions.
@@ -15,7 +15,7 @@ This package belongs to the Indicator project. Indicator is a Golang module that
 ```
 Copyright (c) 2021-2024 Onur Cinar.
 The source code is provided under GNU AGPLv3 License.
-https://github.com/cinar/indicator
+https://github.com/jonpastore/indicator
 ```
 
 ### Disclaimer
@@ -192,7 +192,7 @@ const (
 ```
 
 <a name="AwesomeOscillator"></a>
-## type [AwesomeOscillator](<https://github.com/cinar/indicator/blob/master/momentum/awesome_oscillator.go#L33-L39>)
+## type [AwesomeOscillator](<https://github.com/jonpastore/indicator/blob/master/momentum/awesome_oscillator.go#L33-L39>)
 
 AwesomeOscillator represents the configuration parameter for calculating the Awesome Oscillator \(AO\). It gauges market momentum by comparing short\-term price action \(5\-period average\) against long\-term trends \(34\-period average\). Its value around a zero line reflects bullishness above and bearishness below. Crossings of the zero line can signal potential trend reversals. Traders use the AO to confirm existing trends, identify entry/exit points, and understand momentum shifts.
 
@@ -219,7 +219,7 @@ type AwesomeOscillator[T helper.Number] struct {
 ```
 
 <a name="NewAwesomeOscillator"></a>
-### func [NewAwesomeOscillator](<https://github.com/cinar/indicator/blob/master/momentum/awesome_oscillator.go#L42>)
+### func [NewAwesomeOscillator](<https://github.com/jonpastore/indicator/blob/master/momentum/awesome_oscillator.go#L42>)
 
 ```go
 func NewAwesomeOscillator[T helper.Number]() *AwesomeOscillator[T]
@@ -228,7 +228,7 @@ func NewAwesomeOscillator[T helper.Number]() *AwesomeOscillator[T]
 NewAwesomeOscillator function initializes a new Awesome Oscillator instance.
 
 <a name="AwesomeOscillator[T].Compute"></a>
-### func \(\*AwesomeOscillator\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/awesome_oscillator.go#L50>)
+### func \(\*AwesomeOscillator\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/awesome_oscillator.go#L50>)
 
 ```go
 func (a *AwesomeOscillator[T]) Compute(highs, lows <-chan T) <-chan T
@@ -237,7 +237,7 @@ func (a *AwesomeOscillator[T]) Compute(highs, lows <-chan T) <-chan T
 Compute function takes a channel of numbers and computes the AwesomeOscillator.
 
 <a name="AwesomeOscillator[T].IdlePeriod"></a>
-### func \(\*AwesomeOscillator\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/awesome_oscillator.go#L71>)
+### func \(\*AwesomeOscillator\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/awesome_oscillator.go#L71>)
 
 ```go
 func (a *AwesomeOscillator[T]) IdlePeriod() int
@@ -246,7 +246,7 @@ func (a *AwesomeOscillator[T]) IdlePeriod() int
 IdlePeriod is the initial period that Awesome Oscillator won't yield any results.
 
 <a name="ChaikinOscillator"></a>
-## type [ChaikinOscillator](<https://github.com/cinar/indicator/blob/master/momentum/chaikin_oscillator.go#L32-L41>)
+## type [ChaikinOscillator](<https://github.com/jonpastore/indicator/blob/master/momentum/chaikin_oscillator.go#L32-L41>)
 
 ChaikinOscillator represents the configuration parameter for calculating the Chaikin Oscillator. It measures the momentum of the Accumulation/Distribution \(A/D\) using the Moving Average Convergence Divergence \(MACD\) formula. It takes the difference between fast and slow periods EMA of the A/D. Cross above the A/D line indicates bullish.
 
@@ -275,7 +275,7 @@ type ChaikinOscillator[T helper.Number] struct {
 ```
 
 <a name="NewChaikinOscillator"></a>
-### func [NewChaikinOscillator](<https://github.com/cinar/indicator/blob/master/momentum/chaikin_oscillator.go#L44>)
+### func [NewChaikinOscillator](<https://github.com/jonpastore/indicator/blob/master/momentum/chaikin_oscillator.go#L44>)
 
 ```go
 func NewChaikinOscillator[T helper.Number]() *ChaikinOscillator[T]
@@ -284,7 +284,7 @@ func NewChaikinOscillator[T helper.Number]() *ChaikinOscillator[T]
 NewChaikinOscillator function initializes a new Chaikin Oscillator instance.
 
 <a name="ChaikinOscillator[T].Compute"></a>
-### func \(\*ChaikinOscillator\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/chaikin_oscillator.go#L53>)
+### func \(\*ChaikinOscillator\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/chaikin_oscillator.go#L53>)
 
 ```go
 func (c *ChaikinOscillator[T]) Compute(highs, lows, closings, volumes <-chan T) (<-chan T, <-chan T)
@@ -293,7 +293,7 @@ func (c *ChaikinOscillator[T]) Compute(highs, lows, closings, volumes <-chan T) 
 Compute function takes a channel of numbers and computes the Chaikin Oscillator.
 
 <a name="ChaikinOscillator[T].IdlePeriod"></a>
-### func \(\*ChaikinOscillator\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/chaikin_oscillator.go#L71>)
+### func \(\*ChaikinOscillator\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/chaikin_oscillator.go#L71>)
 
 ```go
 func (c *ChaikinOscillator[T]) IdlePeriod() int
@@ -302,7 +302,7 @@ func (c *ChaikinOscillator[T]) IdlePeriod() int
 IdlePeriod is the initial period that Chaikin Oscillator won't yield any results.
 
 <a name="IchimokuCloud"></a>
-## type [IchimokuCloud](<https://github.com/cinar/indicator/blob/master/momentum/ichimoku_cloud.go#L40-L61>)
+## type [IchimokuCloud](<https://github.com/jonpastore/indicator/blob/master/momentum/ichimoku_cloud.go#L40-L61>)
 
 IchimokuCloud represents the configuration parameter for calculating the Ichimoku Cloud. It is also known as the Ichimoku Kinko Hyo, is a versatile indicator that defines support and resistance, identifies trend direction, gauges momentum, and provides trading signals.
 
@@ -347,7 +347,7 @@ type IchimokuCloud[T helper.Number] struct {
 ```
 
 <a name="NewIchimokuCloud"></a>
-### func [NewIchimokuCloud](<https://github.com/cinar/indicator/blob/master/momentum/ichimoku_cloud.go#L64>)
+### func [NewIchimokuCloud](<https://github.com/jonpastore/indicator/blob/master/momentum/ichimoku_cloud.go#L64>)
 
 ```go
 func NewIchimokuCloud[T helper.Number]() *IchimokuCloud[T]
@@ -356,7 +356,7 @@ func NewIchimokuCloud[T helper.Number]() *IchimokuCloud[T]
 NewIchimokuCloud function initializes a new Ichimoku Cloud instance.
 
 <a name="IchimokuCloud[T].Compute"></a>
-### func \(\*IchimokuCloud\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/ichimoku_cloud.go#L78>)
+### func \(\*IchimokuCloud\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/ichimoku_cloud.go#L78>)
 
 ```go
 func (i *IchimokuCloud[T]) Compute(highs, lows, closings <-chan T) (<-chan T, <-chan T, <-chan T, <-chan T, <-chan T)
@@ -365,7 +365,7 @@ func (i *IchimokuCloud[T]) Compute(highs, lows, closings <-chan T) (<-chan T, <-
 Compute function takes a channel of numbers and computes the Ichimoku Cloud. Returns conversionLine, baseLine, leadingSpanA, leadingSpanB, laggingSpan
 
 <a name="IchimokuCloud[T].IdlePeriod"></a>
-### func \(\*IchimokuCloud\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/ichimoku_cloud.go#L139>)
+### func \(\*IchimokuCloud\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/ichimoku_cloud.go#L139>)
 
 ```go
 func (i *IchimokuCloud[T]) IdlePeriod() int
@@ -374,7 +374,7 @@ func (i *IchimokuCloud[T]) IdlePeriod() int
 IdlePeriod is the initial period that Ichimoku Cloud won't yield any results.
 
 <a name="Ppo"></a>
-## type [Ppo](<https://github.com/cinar/indicator/blob/master/momentum/ppo.go#L35-L44>)
+## type [Ppo](<https://github.com/jonpastore/indicator/blob/master/momentum/ppo.go#L35-L44>)
 
 Ppo represents the configuration parameter for calculating the Percentage Price Oscillator \(PPO\). It is a momentum oscillator for the price. It is used to indicate the ups and downs based on the price. A breakout is confirmed when PPO is positive.
 
@@ -405,7 +405,7 @@ type Ppo[T helper.Number] struct {
 ```
 
 <a name="NewPpo"></a>
-### func [NewPpo](<https://github.com/cinar/indicator/blob/master/momentum/ppo.go#L47>)
+### func [NewPpo](<https://github.com/jonpastore/indicator/blob/master/momentum/ppo.go#L47>)
 
 ```go
 func NewPpo[T helper.Number]() *Ppo[T]
@@ -414,7 +414,7 @@ func NewPpo[T helper.Number]() *Ppo[T]
 NewPpo function initializes a new Percentage Price Oscillator instance.
 
 <a name="Ppo[T].Compute"></a>
-### func \(\*Ppo\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/ppo.go#L57>)
+### func \(\*Ppo\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/ppo.go#L57>)
 
 ```go
 func (p *Ppo[T]) Compute(closings <-chan T) (<-chan T, <-chan T, <-chan T)
@@ -423,7 +423,7 @@ func (p *Ppo[T]) Compute(closings <-chan T) (<-chan T, <-chan T, <-chan T)
 Compute function takes a channel of numbers and computes the Percentage Price Oscillator. Returns ppo, signal, histogram.
 
 <a name="Ppo[T].IdlePeriod"></a>
-### func \(\*Ppo\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/ppo.go#L100>)
+### func \(\*Ppo\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/ppo.go#L100>)
 
 ```go
 func (p *Ppo[T]) IdlePeriod() int
@@ -432,7 +432,7 @@ func (p *Ppo[T]) IdlePeriod() int
 IdlePeriod is the initial period that Percentage Price Oscillator won't yield any results.
 
 <a name="Pvo"></a>
-## type [Pvo](<https://github.com/cinar/indicator/blob/master/momentum/pvo.go#L35-L44>)
+## type [Pvo](<https://github.com/jonpastore/indicator/blob/master/momentum/pvo.go#L35-L44>)
 
 Pvo represents the configuration parameter for calculating the Percentage Volume Oscillator \(PVO\). It is a momentum oscillator for the price. It is used to indicate the ups and downs based on the price. A breakout is confirmed when PVO is positive.
 
@@ -463,7 +463,7 @@ type Pvo[T helper.Number] struct {
 ```
 
 <a name="NewPvo"></a>
-### func [NewPvo](<https://github.com/cinar/indicator/blob/master/momentum/pvo.go#L47>)
+### func [NewPvo](<https://github.com/jonpastore/indicator/blob/master/momentum/pvo.go#L47>)
 
 ```go
 func NewPvo[T helper.Number]() *Pvo[T]
@@ -472,7 +472,7 @@ func NewPvo[T helper.Number]() *Pvo[T]
 NewPvo function initializes a new Percentage Volume Oscillator instance.
 
 <a name="Pvo[T].Compute"></a>
-### func \(\*Pvo\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/pvo.go#L57>)
+### func \(\*Pvo\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/pvo.go#L57>)
 
 ```go
 func (p *Pvo[T]) Compute(volumes <-chan T) (<-chan T, <-chan T, <-chan T)
@@ -481,7 +481,7 @@ func (p *Pvo[T]) Compute(volumes <-chan T) (<-chan T, <-chan T, <-chan T)
 Compute function takes a channel of numbers and computes the Percentage Volume Oscillator. Returns pvo, signal, histogram.
 
 <a name="Pvo[T].IdlePeriod"></a>
-### func \(\*Pvo\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/pvo.go#L100>)
+### func \(\*Pvo\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/pvo.go#L100>)
 
 ```go
 func (p *Pvo[T]) IdlePeriod() int
@@ -490,7 +490,7 @@ func (p *Pvo[T]) IdlePeriod() int
 IdlePeriod is the initial period that Percentage Volume Oscillator won't yield any results.
 
 <a name="Qstick"></a>
-## type [Qstick](<https://github.com/cinar/indicator/blob/master/momentum/qstick.go#L33-L35>)
+## type [Qstick](<https://github.com/jonpastore/indicator/blob/master/momentum/qstick.go#L33-L35>)
 
 Qstick represents the configuration parameter for calculating the Qstick indicator. Qstick is a momentum indicator used to identify an asset's trend by looking at the SMA of the difference between its closing and opening.
 
@@ -516,7 +516,7 @@ type Qstick[T helper.Number] struct {
 ```
 
 <a name="NewQstick"></a>
-### func [NewQstick](<https://github.com/cinar/indicator/blob/master/momentum/qstick.go#L38>)
+### func [NewQstick](<https://github.com/jonpastore/indicator/blob/master/momentum/qstick.go#L38>)
 
 ```go
 func NewQstick[T helper.Number]() *Qstick[T]
@@ -525,7 +525,7 @@ func NewQstick[T helper.Number]() *Qstick[T]
 NewQstick function initializes a new QStick instance.
 
 <a name="Qstick[T].Compute"></a>
-### func \(\*Qstick\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/qstick.go#L49>)
+### func \(\*Qstick\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/qstick.go#L49>)
 
 ```go
 func (q *Qstick[T]) Compute(openings, closings <-chan T) <-chan T
@@ -534,7 +534,7 @@ func (q *Qstick[T]) Compute(openings, closings <-chan T) <-chan T
 Compute function takes a channel of numbers and computes the Qstick.
 
 <a name="Qstick[T].IdlePeriod"></a>
-### func \(\*Qstick\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/qstick.go#L57>)
+### func \(\*Qstick\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/qstick.go#L57>)
 
 ```go
 func (q *Qstick[T]) IdlePeriod() int
@@ -543,7 +543,7 @@ func (q *Qstick[T]) IdlePeriod() int
 IdlePeriod is the initial period that Qstick won't yield any results.
 
 <a name="Rsi"></a>
-## type [Rsi](<https://github.com/cinar/indicator/blob/master/momentum/rsi.go#L27-L30>)
+## type [Rsi](<https://github.com/jonpastore/indicator/blob/master/momentum/rsi.go#L27-L30>)
 
 Rsi represents the configuration parameter for calculating the Relative Strength Index \(RSI\). It is a momentum indicator that measures the magnitude of recent price changes to evaluate overbought and oversold conditions.
 
@@ -567,7 +567,7 @@ type Rsi[T helper.Number] struct {
 ```
 
 <a name="NewRsi"></a>
-### func [NewRsi](<https://github.com/cinar/indicator/blob/master/momentum/rsi.go#L33>)
+### func [NewRsi](<https://github.com/jonpastore/indicator/blob/master/momentum/rsi.go#L33>)
 
 ```go
 func NewRsi[T helper.Number]() *Rsi[T]
@@ -576,7 +576,7 @@ func NewRsi[T helper.Number]() *Rsi[T]
 NewRsi function initializes a new Relative Strength Index instance with the default parameters.
 
 <a name="NewRsiWithPeriod"></a>
-### func [NewRsiWithPeriod](<https://github.com/cinar/indicator/blob/master/momentum/rsi.go#L38>)
+### func [NewRsiWithPeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/rsi.go#L38>)
 
 ```go
 func NewRsiWithPeriod[T helper.Number](period int) *Rsi[T]
@@ -585,7 +585,7 @@ func NewRsiWithPeriod[T helper.Number](period int) *Rsi[T]
 NewRsiWithPeriod function initializes a new Relative Strength Index instance with the given period.
 
 <a name="Rsi[T].Compute"></a>
-### func \(\*Rsi\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/rsi.go#L45>)
+### func \(\*Rsi\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/rsi.go#L45>)
 
 ```go
 func (r *Rsi[T]) Compute(closings <-chan T) <-chan T
@@ -594,7 +594,7 @@ func (r *Rsi[T]) Compute(closings <-chan T) <-chan T
 Compute function takes a channel of closings numbers and computes the Relative Strength Index.
 
 <a name="Rsi[T].IdlePeriod"></a>
-### func \(\*Rsi\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/rsi.go#L90>)
+### func \(\*Rsi\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/rsi.go#L90>)
 
 ```go
 func (r *Rsi[T]) IdlePeriod() int
@@ -603,7 +603,7 @@ func (r *Rsi[T]) IdlePeriod() int
 IdlePeriod is the initial period that Relative Strength Index won't yield any results.
 
 <a name="StochasticOscillator"></a>
-## type [StochasticOscillator](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_oscillator.go#L31-L40>)
+## type [StochasticOscillator](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_oscillator.go#L31-L40>)
 
 StochasticOscillator represents the configuration parameter for calculating the Stochastic Oscillator. It is a momentum indicator that shows the location of the closing relative to high\-low range over a set number of periods.
 
@@ -633,7 +633,7 @@ type StochasticOscillator[T helper.Number] struct {
 ```
 
 <a name="NewStochasticOscillator"></a>
-### func [NewStochasticOscillator](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_oscillator.go#L43>)
+### func [NewStochasticOscillator](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_oscillator.go#L43>)
 
 ```go
 func NewStochasticOscillator[T helper.Number]() *StochasticOscillator[T]
@@ -642,7 +642,7 @@ func NewStochasticOscillator[T helper.Number]() *StochasticOscillator[T]
 NewStochasticOscillator function initializes a new Stochastic Oscillator instance.
 
 <a name="StochasticOscillator[T].Compute"></a>
-### func \(\*StochasticOscillator\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_oscillator.go#L52>)
+### func \(\*StochasticOscillator\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_oscillator.go#L52>)
 
 ```go
 func (s *StochasticOscillator[T]) Compute(highs, lows, closings <-chan T) (<-chan T, <-chan T)
@@ -651,7 +651,7 @@ func (s *StochasticOscillator[T]) Compute(highs, lows, closings <-chan T) (<-cha
 Compute function takes a channel of numbers and computes the Stochastic Oscillator. Returns k and d.
 
 <a name="StochasticOscillator[T].IdlePeriod"></a>
-### func \(\*StochasticOscillator\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_oscillator.go#L82>)
+### func \(\*StochasticOscillator\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_oscillator.go#L82>)
 
 ```go
 func (s *StochasticOscillator[T]) IdlePeriod() int
@@ -660,7 +660,7 @@ func (s *StochasticOscillator[T]) IdlePeriod() int
 IdlePeriod is the initial period that Stochastic Oscillator won't yield any results.
 
 <a name="StochasticRsi"></a>
-## type [StochasticRsi](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_rsi.go#L29-L38>)
+## type [StochasticRsi](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_rsi.go#L29-L38>)
 
 StochasticRsi represents the configuration parameter for calculating the Stochastic Relative Strength Index \(RSI\). It is a momentum indicator that focuses on the historical performance to evaluate overbought and oversold conditions.
 
@@ -691,7 +691,7 @@ type StochasticRsi[T helper.Number] struct {
 ```
 
 <a name="NewStochasticRsi"></a>
-### func [NewStochasticRsi](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_rsi.go#L41>)
+### func [NewStochasticRsi](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_rsi.go#L41>)
 
 ```go
 func NewStochasticRsi[T helper.Number]() *StochasticRsi[T]
@@ -700,7 +700,7 @@ func NewStochasticRsi[T helper.Number]() *StochasticRsi[T]
 NewStochasticRsi function initializes a new Storchastic RSI instance with the default parameters.
 
 <a name="NewStochasticRsiWithPeriod"></a>
-### func [NewStochasticRsiWithPeriod](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_rsi.go#L46>)
+### func [NewStochasticRsiWithPeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_rsi.go#L46>)
 
 ```go
 func NewStochasticRsiWithPeriod[T helper.Number](period int) *StochasticRsi[T]
@@ -709,7 +709,7 @@ func NewStochasticRsiWithPeriod[T helper.Number](period int) *StochasticRsi[T]
 NewStochasticRsiWithPeriod function initializes a new Stochastic RSI instance with the given period.
 
 <a name="StochasticRsi[T].Compute"></a>
-### func \(\*StochasticRsi\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_rsi.go#L55>)
+### func \(\*StochasticRsi\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_rsi.go#L55>)
 
 ```go
 func (s *StochasticRsi[T]) Compute(closings <-chan T) <-chan T
@@ -718,7 +718,7 @@ func (s *StochasticRsi[T]) Compute(closings <-chan T) <-chan T
 Compute function takes a channel of closings numbers and computes the Stochastic RSI.
 
 <a name="StochasticRsi[T].IdlePeriod"></a>
-### func \(\*StochasticRsi\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/stochastic_rsi.go#L85>)
+### func \(\*StochasticRsi\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/stochastic_rsi.go#L85>)
 
 ```go
 func (s *StochasticRsi[T]) IdlePeriod() int
@@ -727,7 +727,7 @@ func (s *StochasticRsi[T]) IdlePeriod() int
 IdlePeriod is the initial period that Stochasic RSI won't yield any results.
 
 <a name="WilliamsR"></a>
-## type [WilliamsR](<https://github.com/cinar/indicator/blob/master/momentum/williams_r.go#L29-L35>)
+## type [WilliamsR](<https://github.com/jonpastore/indicator/blob/master/momentum/williams_r.go#L29-L35>)
 
 WilliamsR represents the configuration parameter for calculating the Williams %R, or just %R. It is a technical analysis oscillator showing the current closing price in relation to the high and low of the past N days \(for a given N\). It was developed by a publisher and promoter of trading materials, Larry Williams. Its purpose is to tell whether a stock or commodity market is trading near the high or the low, or somewhere in between, of its recent trading range. Buy when \-80 and below. Sell when \-20 and above.
 
@@ -753,7 +753,7 @@ type WilliamsR[T helper.Number] struct {
 ```
 
 <a name="NewWilliamsR"></a>
-### func [NewWilliamsR](<https://github.com/cinar/indicator/blob/master/momentum/williams_r.go#L38>)
+### func [NewWilliamsR](<https://github.com/jonpastore/indicator/blob/master/momentum/williams_r.go#L38>)
 
 ```go
 func NewWilliamsR[T helper.Number]() *WilliamsR[T]
@@ -762,7 +762,7 @@ func NewWilliamsR[T helper.Number]() *WilliamsR[T]
 NewWilliamsR function initializes a new Williams R instance.
 
 <a name="WilliamsR[T].Compute"></a>
-### func \(\*WilliamsR\[T\]\) [Compute](<https://github.com/cinar/indicator/blob/master/momentum/williams_r.go#L46>)
+### func \(\*WilliamsR\[T\]\) [Compute](<https://github.com/jonpastore/indicator/blob/master/momentum/williams_r.go#L46>)
 
 ```go
 func (w *WilliamsR[T]) Compute(highs, lows, closings <-chan T) <-chan T
@@ -771,7 +771,7 @@ func (w *WilliamsR[T]) Compute(highs, lows, closings <-chan T) <-chan T
 Compute function takes a channel of numbers and computes the Williams R.
 
 <a name="WilliamsR[T].IdlePeriod"></a>
-### func \(\*WilliamsR\[T\]\) [IdlePeriod](<https://github.com/cinar/indicator/blob/master/momentum/williams_r.go#L66>)
+### func \(\*WilliamsR\[T\]\) [IdlePeriod](<https://github.com/jonpastore/indicator/blob/master/momentum/williams_r.go#L66>)
 
 ```go
 func (w *WilliamsR[T]) IdlePeriod() int

@@ -3,7 +3,7 @@
 # helper
 
 ```go
-import "github.com/cinar/indicator/v2/helper"
+import "github.com/jonpastore/indicator/v2/helper"
 ```
 
 Package helper contains the helper functions.
@@ -15,7 +15,7 @@ This package belongs to the Indicator project. Indicator is a Golang module that
 ```
 Copyright (c) 2021-2024 Onur Cinar.
 The source code is provided under GNU AGPLv3 License.
-https://github.com/cinar/indicator
+https://github.com/jonpastore/indicator
 ```
 
 ### Disclaimer
@@ -140,7 +140,7 @@ const (
 ```
 
 <a name="Abs"></a>
-## func [Abs](<https://github.com/cinar/indicator/blob/master/helper/abs.go#L15>)
+## func [Abs](<https://github.com/jonpastore/indicator/blob/master/helper/abs.go#L15>)
 
 ```go
 func Abs[T Number](c <-chan T) <-chan T
@@ -156,7 +156,7 @@ fmt.Println(helper.ChanToSlice(abs)) // [10, 20, 4, 5]
 ```
 
 <a name="Add"></a>
-## func [Add](<https://github.com/cinar/indicator/blob/master/helper/add.go#L18>)
+## func [Add](<https://github.com/jonpastore/indicator/blob/master/helper/add.go#L18>)
 
 ```go
 func Add[T Number](ac, bc <-chan T) <-chan T
@@ -176,7 +176,7 @@ fmt.Println(actual) // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 ```
 
 <a name="AppendOrWriteToCsvFile"></a>
-## func [AppendOrWriteToCsvFile](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L287>)
+## func [AppendOrWriteToCsvFile](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L287>)
 
 ```go
 func AppendOrWriteToCsvFile[T any](fileName string, hasHeader bool, rows <-chan *T) error
@@ -185,7 +185,7 @@ func AppendOrWriteToCsvFile[T any](fileName string, hasHeader bool, rows <-chan 
 AppendOrWriteToCsvFile writes the provided rows of data to the specified file, appending to the existing file if it exists or creating a new one if it doesn't. In append mode, the function assumes that the existing file's column order matches the field order of the given row struct to ensure consistent data structure.
 
 <a name="Apply"></a>
-## func [Apply](<https://github.com/cinar/indicator/blob/master/helper/apply.go#L17>)
+## func [Apply](<https://github.com/jonpastore/indicator/blob/master/helper/apply.go#L17>)
 
 ```go
 func Apply[T Number](c <-chan T, f func(T) T) <-chan T
@@ -202,7 +202,7 @@ timesTwo := helper.Apply(c, func(n int) int {
 ```
 
 <a name="Buffered"></a>
-## func [Buffered](<https://github.com/cinar/indicator/blob/master/helper/buffered.go#L12>)
+## func [Buffered](<https://github.com/jonpastore/indicator/blob/master/helper/buffered.go#L12>)
 
 ```go
 func Buffered[T any](c <-chan T, size int) <-chan T
@@ -213,7 +213,7 @@ Buffered takes a channel of any type and returns a new channel of the same type 
 Example:
 
 <a name="ChanToJSON"></a>
-## func [ChanToJSON](<https://github.com/cinar/indicator/blob/master/helper/chan_to_json.go#L23>)
+## func [ChanToJSON](<https://github.com/jonpastore/indicator/blob/master/helper/chan_to_json.go#L23>)
 
 ```go
 func ChanToJSON[T any](c <-chan T, w io.Writer) error
@@ -234,7 +234,7 @@ fmt.Println(buffer.String())
 ```
 
 <a name="ChanToSlice"></a>
-## func [ChanToSlice](<https://github.com/cinar/indicator/blob/master/helper/chan_to_slice.go#L19>)
+## func [ChanToSlice](<https://github.com/jonpastore/indicator/blob/master/helper/chan_to_slice.go#L19>)
 
 ```go
 func ChanToSlice[T any](c <-chan T) []T
@@ -256,7 +256,7 @@ fmt.Println(helper.ChanToSlice(c)) // [1, 2, 3, 4]
 ```
 
 <a name="Change"></a>
-## func [Change](<https://github.com/cinar/indicator/blob/master/helper/change.go#L14>)
+## func [Change](<https://github.com/jonpastore/indicator/blob/master/helper/change.go#L14>)
 
 ```go
 func Change[T Number](c <-chan T, before int) <-chan T
@@ -273,7 +273,7 @@ fmt.Println(helper.ChanToSlice(output)) // [4, 3, 3, -3, -7, -1, 2, 3]
 ```
 
 <a name="ChangePercent"></a>
-## func [ChangePercent](<https://github.com/cinar/indicator/blob/master/helper/change_percent.go#L15>)
+## func [ChangePercent](<https://github.com/jonpastore/indicator/blob/master/helper/change_percent.go#L15>)
 
 ```go
 func ChangePercent[T Number](c <-chan T, before int) <-chan T
@@ -290,7 +290,7 @@ fmt.Println(helper.ChanToSlice(actual)) // [400, 150, 60, -60, -87.5, -50, 200, 
 ```
 
 <a name="ChangeRatio"></a>
-## func [ChangeRatio](<https://github.com/cinar/indicator/blob/master/helper/change_ratio.go#L15>)
+## func [ChangeRatio](<https://github.com/jonpastore/indicator/blob/master/helper/change_ratio.go#L15>)
 
 ```go
 func ChangeRatio[T Number](c <-chan T, before int) <-chan T
@@ -307,7 +307,7 @@ fmt.Println(helper.ChanToSlice(actual)) // [400, 150, 60, -60, -87.5, -50, 200, 
 ```
 
 <a name="CheckEquals"></a>
-## func [CheckEquals](<https://github.com/cinar/indicator/blob/master/helper/check.go#L14>)
+## func [CheckEquals](<https://github.com/jonpastore/indicator/blob/master/helper/check.go#L14>)
 
 ```go
 func CheckEquals[T comparable](inputs ...<-chan T) error
@@ -316,7 +316,7 @@ func CheckEquals[T comparable](inputs ...<-chan T) error
 CheckEquals determines whether the two channels are equal.
 
 <a name="CloseAndLogError"></a>
-## func [CloseAndLogError](<https://github.com/cinar/indicator/blob/master/helper/closer.go#L13>)
+## func [CloseAndLogError](<https://github.com/jonpastore/indicator/blob/master/helper/closer.go#L13>)
 
 ```go
 func CloseAndLogError(closer io.Closer, message string)
@@ -325,7 +325,7 @@ func CloseAndLogError(closer io.Closer, message string)
 CloseAndLogError attempts to close the closer and logs any error.
 
 <a name="CommonPeriod"></a>
-## func [CommonPeriod](<https://github.com/cinar/indicator/blob/master/helper/sync.go#L24>)
+## func [CommonPeriod](<https://github.com/jonpastore/indicator/blob/master/helper/sync.go#L24>)
 
 ```go
 func CommonPeriod(periods ...int) int
@@ -350,7 +350,7 @@ c3 := helper.Sync(commonPeriod, 3, c3)
 ```
 
 <a name="Count"></a>
-## func [Count](<https://github.com/cinar/indicator/blob/master/helper/count.go#L25>)
+## func [Count](<https://github.com/jonpastore/indicator/blob/master/helper/count.go#L25>)
 
 ```go
 func Count[T Number, O any](from T, other <-chan O) <-chan T
@@ -377,7 +377,7 @@ fmt.Println(<- s) // 4
 ```
 
 <a name="DaysBetween"></a>
-## func [DaysBetween](<https://github.com/cinar/indicator/blob/master/helper/days_between.go#L13>)
+## func [DaysBetween](<https://github.com/jonpastore/indicator/blob/master/helper/days_between.go#L13>)
 
 ```go
 func DaysBetween(from, to time.Time) int
@@ -386,7 +386,7 @@ func DaysBetween(from, to time.Time) int
 DaysBetween calculates the days between the given two times.
 
 <a name="DecrementBy"></a>
-## func [DecrementBy](<https://github.com/cinar/indicator/blob/master/helper/decrement_by.go#L16>)
+## func [DecrementBy](<https://github.com/jonpastore/indicator/blob/master/helper/decrement_by.go#L16>)
 
 ```go
 func DecrementBy[T Number](c <-chan T, d T) <-chan T
@@ -403,7 +403,7 @@ fmt.Println(helper.ChanToSlice(substractOne)) // [0, 1, 2, 3]
 ```
 
 <a name="Divide"></a>
-## func [Divide](<https://github.com/cinar/indicator/blob/master/helper/divide.go#L20>)
+## func [Divide](<https://github.com/jonpastore/indicator/blob/master/helper/divide.go#L20>)
 
 ```go
 func Divide[T Number](ac, bc <-chan T) <-chan T
@@ -423,7 +423,7 @@ fmt.Println(helper.ChanToSlice(division)) // [1, 4, 2, 4, 2]
 ```
 
 <a name="DivideBy"></a>
-## func [DivideBy](<https://github.com/cinar/indicator/blob/master/helper/divide_by.go#L15>)
+## func [DivideBy](<https://github.com/jonpastore/indicator/blob/master/helper/divide_by.go#L15>)
 
 ```go
 func DivideBy[T Number](c <-chan T, d T) <-chan T
@@ -439,7 +439,7 @@ fmt.Println(helper.ChanToSlice(half)) // [1, 2, 3, 4]
 ```
 
 <a name="Drain"></a>
-## func [Drain](<https://github.com/cinar/indicator/blob/master/helper/drain.go#L8>)
+## func [Drain](<https://github.com/jonpastore/indicator/blob/master/helper/drain.go#L8>)
 
 ```go
 func Drain[T any](c <-chan T)
@@ -448,7 +448,7 @@ func Drain[T any](c <-chan T)
 Drain drains the given channel. It blocks the caller.
 
 <a name="Duplicate"></a>
-## func [Duplicate](<https://github.com/cinar/indicator/blob/master/helper/duplicate.go#L17>)
+## func [Duplicate](<https://github.com/jonpastore/indicator/blob/master/helper/duplicate.go#L17>)
 
 ```go
 func Duplicate[T any](input <-chan T, count int) []<-chan T
@@ -467,7 +467,7 @@ fmt.Println(helper.ChanToSlice(outputs[1])) // [-10, 20, -4, -5]
 ```
 
 <a name="Echo"></a>
-## func [Echo](<https://github.com/cinar/indicator/blob/master/helper/echo.go#L14>)
+## func [Echo](<https://github.com/jonpastore/indicator/blob/master/helper/echo.go#L14>)
 
 ```go
 func Echo[T any](input <-chan T, last, count int) <-chan T
@@ -484,7 +484,7 @@ fmt.Println(helper.ChanToSlice(output)) // [2, 4, 6, 8, 6, 8, 6, 8, 6, 8, 6, 8]
 ```
 
 <a name="Field"></a>
-## func [Field](<https://github.com/cinar/indicator/blob/master/helper/field.go#L14>)
+## func [Field](<https://github.com/jonpastore/indicator/blob/master/helper/field.go#L14>)
 
 ```go
 func Field[T, S any](c <-chan *S, name string) (<-chan T, error)
@@ -493,7 +493,7 @@ func Field[T, S any](c <-chan *S, name string) (<-chan T, error)
 Field extracts a specific field from a channel of struct pointers and delivers it through a new channel.
 
 <a name="Filter"></a>
-## func [Filter](<https://github.com/cinar/indicator/blob/master/helper/filter.go#L17>)
+## func [Filter](<https://github.com/jonpastore/indicator/blob/master/helper/filter.go#L17>)
 
 ```go
 func Filter[T any](c <-chan T, p func(T) bool) <-chan T
@@ -510,7 +510,7 @@ even := helper.Filter(c, func(n int) bool {
 ```
 
 <a name="First"></a>
-## func [First](<https://github.com/cinar/indicator/blob/master/helper/first.go#L8>)
+## func [First](<https://github.com/jonpastore/indicator/blob/master/helper/first.go#L8>)
 
 ```go
 func First[T any](c <-chan T, count int) <-chan T
@@ -519,7 +519,7 @@ func First[T any](c <-chan T, count int) <-chan T
 First takes a channel of values and returns a new channel containing the first N values.
 
 <a name="Gcd"></a>
-## func [Gcd](<https://github.com/cinar/indicator/blob/master/helper/gcd.go#L8>)
+## func [Gcd](<https://github.com/jonpastore/indicator/blob/master/helper/gcd.go#L8>)
 
 ```go
 func Gcd(values ...int) int
@@ -528,7 +528,7 @@ func Gcd(values ...int) int
 Gcd calculates the Greatest Common Divisor of the given numbers.
 
 <a name="Head"></a>
-## func [Head](<https://github.com/cinar/indicator/blob/master/helper/head.go#L16>)
+## func [Head](<https://github.com/jonpastore/indicator/blob/master/helper/head.go#L16>)
 
 ```go
 func Head[T Number](c <-chan T, count int) <-chan T
@@ -545,7 +545,7 @@ fmt.Println(helper.ChanToSlice(actual)) // [2, 4]
 ```
 
 <a name="IncrementBy"></a>
-## func [IncrementBy](<https://github.com/cinar/indicator/blob/master/helper/increment_by.go#L16>)
+## func [IncrementBy](<https://github.com/jonpastore/indicator/blob/master/helper/increment_by.go#L16>)
 
 ```go
 func IncrementBy[T Number](c <-chan T, i T) <-chan T
@@ -562,7 +562,7 @@ fmt.Println(helper.ChanToSlice(actual)) // [2, 3, 4, 5]
 ```
 
 <a name="JSONToChan"></a>
-## func [JSONToChan](<https://github.com/cinar/indicator/blob/master/helper/json_to_chan.go#L16>)
+## func [JSONToChan](<https://github.com/jonpastore/indicator/blob/master/helper/json_to_chan.go#L16>)
 
 ```go
 func JSONToChan[T any](r io.Reader) <-chan T
@@ -573,7 +573,7 @@ JSONToChan reads values from the specified reader in JSON format into a channel 
 Example:
 
 <a name="KeepNegatives"></a>
-## func [KeepNegatives](<https://github.com/cinar/indicator/blob/master/helper/keep_negatives.go#L15>)
+## func [KeepNegatives](<https://github.com/jonpastore/indicator/blob/master/helper/keep_negatives.go#L15>)
 
 ```go
 func KeepNegatives[T Number](c <-chan T) <-chan T
@@ -590,7 +590,7 @@ fmt.Println(helper.ChanToSlice(negatives)) // [-10, 0, 0, -5]
 ```
 
 <a name="KeepPositives"></a>
-## func [KeepPositives](<https://github.com/cinar/indicator/blob/master/helper/keep_positives.go#L15>)
+## func [KeepPositives](<https://github.com/jonpastore/indicator/blob/master/helper/keep_positives.go#L15>)
 
 ```go
 func KeepPositives[T Number](c <-chan T) <-chan T
@@ -607,7 +607,7 @@ fmt.Println(helper.ChanToSlice(positives)) // [0, 20, 4, 0]
 ```
 
 <a name="Last"></a>
-## func [Last](<https://github.com/cinar/indicator/blob/master/helper/last.go#L8>)
+## func [Last](<https://github.com/jonpastore/indicator/blob/master/helper/last.go#L8>)
 
 ```go
 func Last[T any](c <-chan T, count int) <-chan T
@@ -616,7 +616,7 @@ func Last[T any](c <-chan T, count int) <-chan T
 Last takes a channel of values and returns a new channel containing the last N values.
 
 <a name="Lcm"></a>
-## func [Lcm](<https://github.com/cinar/indicator/blob/master/helper/lcm.go#L8>)
+## func [Lcm](<https://github.com/jonpastore/indicator/blob/master/helper/lcm.go#L8>)
 
 ```go
 func Lcm(values ...int) int
@@ -625,7 +625,7 @@ func Lcm(values ...int) int
 Lcm calculates the Least Common Multiple of the given numbers.
 
 <a name="Map"></a>
-## func [Map](<https://github.com/cinar/indicator/blob/master/helper/map.go#L17>)
+## func [Map](<https://github.com/jonpastore/indicator/blob/master/helper/map.go#L17>)
 
 ```go
 func Map[F, T any](c <-chan F, f func(F) T) <-chan T
@@ -642,7 +642,7 @@ timesTwo := helper.Map(c, func(n int) int {
 ```
 
 <a name="MapWithPrevious"></a>
-## func [MapWithPrevious](<https://github.com/cinar/indicator/blob/master/helper/map_with_previous.go#L17>)
+## func [MapWithPrevious](<https://github.com/jonpastore/indicator/blob/master/helper/map_with_previous.go#L17>)
 
 ```go
 func MapWithPrevious[F, T any](c <-chan F, f func(T, F) T, previous T) <-chan T
@@ -659,7 +659,7 @@ sum := helper.MapWithPrevious(c, func(p, c int) int {
 ```
 
 <a name="Multiply"></a>
-## func [Multiply](<https://github.com/cinar/indicator/blob/master/helper/multiply.go#L20>)
+## func [Multiply](<https://github.com/jonpastore/indicator/blob/master/helper/multiply.go#L20>)
 
 ```go
 func Multiply[T Number](ac, bc <-chan T) <-chan T
@@ -679,7 +679,7 @@ fmt.Println(helper.ChanToSlice(multiplication)) // [2, 4, 6, 8, 10]
 ```
 
 <a name="MultiplyBy"></a>
-## func [MultiplyBy](<https://github.com/cinar/indicator/blob/master/helper/multiply_by.go#L16>)
+## func [MultiplyBy](<https://github.com/jonpastore/indicator/blob/master/helper/multiply_by.go#L16>)
 
 ```go
 func MultiplyBy[T Number](c <-chan T, m T) <-chan T
@@ -696,7 +696,7 @@ fmt.Println(helper.ChanToSlice(twoTimes)) // [2, 4, 6, 8]
 ```
 
 <a name="Operate"></a>
-## func [Operate](<https://github.com/cinar/indicator/blob/master/helper/operate.go#L15>)
+## func [Operate](<https://github.com/jonpastore/indicator/blob/master/helper/operate.go#L15>)
 
 ```go
 func Operate[A any, B any, R any](ac <-chan A, bc <-chan B, o func(A, B) R) <-chan R
@@ -713,7 +713,7 @@ add := helper.Operate(ac, bc, func(a, b int) int {
 ```
 
 <a name="Operate3"></a>
-## func [Operate3](<https://github.com/cinar/indicator/blob/master/helper/operate3.go#L15>)
+## func [Operate3](<https://github.com/jonpastore/indicator/blob/master/helper/operate3.go#L15>)
 
 ```go
 func Operate3[A any, B any, C any, R any](ac <-chan A, bc <-chan B, cc <-chan C, o func(A, B, C) R) <-chan R
@@ -730,7 +730,7 @@ add := helper.Operate3(ac, bc, cc, func(a, b, c int) int {
 ```
 
 <a name="Pipe"></a>
-## func [Pipe](<https://github.com/cinar/indicator/blob/master/helper/pipe.go#L16>)
+## func [Pipe](<https://github.com/jonpastore/indicator/blob/master/helper/pipe.go#L16>)
 
 ```go
 func Pipe[T any](f <-chan T, t chan<- T)
@@ -748,7 +748,7 @@ fmt.println(helper.ChanToSlice(output)) // [2, 4, 6, 8]
 ```
 
 <a name="Pow"></a>
-## func [Pow](<https://github.com/cinar/indicator/blob/master/helper/pow.go#L17>)
+## func [Pow](<https://github.com/jonpastore/indicator/blob/master/helper/pow.go#L17>)
 
 ```go
 func Pow[T Number](c <-chan T, y T) <-chan T
@@ -765,7 +765,7 @@ fmt.Println(helper.ChanToSlice(squared)) // [4, 9, 25, 100]
 ```
 
 <a name="ReadFromCsvFile"></a>
-## func [ReadFromCsvFile](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L274>)
+## func [ReadFromCsvFile](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L274>)
 
 ```go
 func ReadFromCsvFile[T any](fileName string, hasHeader bool) (<-chan *T, error)
@@ -774,7 +774,7 @@ func ReadFromCsvFile[T any](fileName string, hasHeader bool) (<-chan *T, error)
 ReadFromCsvFile creates a CSV instance, parses CSV data from the provided filename, maps the data to corresponding struct fields, and delivers it through the channel.
 
 <a name="RoundDigit"></a>
-## func [RoundDigit](<https://github.com/cinar/indicator/blob/master/helper/round_digit.go#L15>)
+## func [RoundDigit](<https://github.com/jonpastore/indicator/blob/master/helper/round_digit.go#L15>)
 
 ```go
 func RoundDigit[T Number](n T, d int) T
@@ -790,7 +790,7 @@ fmt.Println(n) // 10.12
 ```
 
 <a name="RoundDigits"></a>
-## func [RoundDigits](<https://github.com/cinar/indicator/blob/master/helper/round_digits.go#L15>)
+## func [RoundDigits](<https://github.com/jonpastore/indicator/blob/master/helper/round_digits.go#L15>)
 
 ```go
 func RoundDigits[T Number](c <-chan T, d int) <-chan T
@@ -807,7 +807,7 @@ fmt.Println(helper.ChanToSlice(rounded)) // [10.12, 5.68, 6.78, 8.91]
 ```
 
 <a name="Seq"></a>
-## func [Seq](<https://github.com/cinar/indicator/blob/master/helper/seq.go#L21>)
+## func [Seq](<https://github.com/jonpastore/indicator/blob/master/helper/seq.go#L21>)
 
 ```go
 func Seq[T Number](from, to, increment T) <-chan T
@@ -828,7 +828,7 @@ fmt.Println(<- s) // 4
 ```
 
 <a name="Shift"></a>
-## func [Shift](<https://github.com/cinar/indicator/blob/master/helper/shift.go#L15>)
+## func [Shift](<https://github.com/jonpastore/indicator/blob/master/helper/shift.go#L15>)
 
 ```go
 func Shift[T any](c <-chan T, count int, fill T) <-chan T
@@ -845,7 +845,7 @@ fmt.Println(helper.ChanToSlice(output)) // [0, 0, 0, 0, 2, 4, 6, 8]
 ```
 
 <a name="Sign"></a>
-## func [Sign](<https://github.com/cinar/indicator/blob/master/helper/sign.go#L15>)
+## func [Sign](<https://github.com/jonpastore/indicator/blob/master/helper/sign.go#L15>)
 
 ```go
 func Sign[T Number](c <-chan T) <-chan T
@@ -862,7 +862,7 @@ fmt.Println(helper.ChanToSlice(sign)) // [-1, 1, -1, 0]
 ```
 
 <a name="Since"></a>
-## func [Since](<https://github.com/cinar/indicator/blob/master/helper/since.go#L9>)
+## func [Since](<https://github.com/jonpastore/indicator/blob/master/helper/since.go#L9>)
 
 ```go
 func Since[T comparable, R Number](c <-chan T) <-chan R
@@ -871,7 +871,7 @@ func Since[T comparable, R Number](c <-chan T) <-chan R
 Since counts the number of periods since the last change of value in a channel of numbers.
 
 <a name="Skip"></a>
-## func [Skip](<https://github.com/cinar/indicator/blob/master/helper/skip.go#L15>)
+## func [Skip](<https://github.com/jonpastore/indicator/blob/master/helper/skip.go#L15>)
 
 ```go
 func Skip[T any](c <-chan T, count int) <-chan T
@@ -888,7 +888,7 @@ fmt.Println(helper.ChanToSlice(actual)) // [6, 8]
 ```
 
 <a name="SliceToChan"></a>
-## func [SliceToChan](<https://github.com/cinar/indicator/blob/master/helper/slice_to_chan.go#L17>)
+## func [SliceToChan](<https://github.com/jonpastore/indicator/blob/master/helper/slice_to_chan.go#L17>)
 
 ```go
 func SliceToChan[T any](slice []T) <-chan T
@@ -908,7 +908,7 @@ fmt.Println(<- c)  // 8
 ```
 
 <a name="Sqrt"></a>
-## func [Sqrt](<https://github.com/cinar/indicator/blob/master/helper/sqrt.go#L16>)
+## func [Sqrt](<https://github.com/jonpastore/indicator/blob/master/helper/sqrt.go#L16>)
 
 ```go
 func Sqrt[T Number](c <-chan T) <-chan T
@@ -925,7 +925,7 @@ fmt.Println(helper.ChanToSlice(sqrt)) // [3, 9, 4, 10]
 ```
 
 <a name="Subtract"></a>
-## func [Subtract](<https://github.com/cinar/indicator/blob/master/helper/subtract.go#L17>)
+## func [Subtract](<https://github.com/jonpastore/indicator/blob/master/helper/subtract.go#L17>)
 
 ```go
 func Subtract[T Number](ac, bc <-chan T) <-chan T
@@ -943,7 +943,7 @@ fmt.Println(helper.ChanToSlice(actual)) // [1, 2, 3, 4, 5]
 ```
 
 <a name="SyncPeriod"></a>
-## func [SyncPeriod](<https://github.com/cinar/indicator/blob/master/helper/sync.go#L29>)
+## func [SyncPeriod](<https://github.com/jonpastore/indicator/blob/master/helper/sync.go#L29>)
 
 ```go
 func SyncPeriod[T any](commonPeriod, period int, c <-chan T) <-chan T
@@ -952,7 +952,7 @@ func SyncPeriod[T any](commonPeriod, period int, c <-chan T) <-chan T
 SyncPeriod adjusts the given channel to match the given common period.
 
 <a name="Waitable"></a>
-## func [Waitable](<https://github.com/cinar/indicator/blob/master/helper/waitable.go#L11>)
+## func [Waitable](<https://github.com/jonpastore/indicator/blob/master/helper/waitable.go#L11>)
 
 ```go
 func Waitable[T any](wg *sync.WaitGroup, c <-chan T) <-chan T
@@ -961,7 +961,7 @@ func Waitable[T any](wg *sync.WaitGroup, c <-chan T) <-chan T
 Waitable increments the wait group before reading from the channel and signals completion when the channel is closed.
 
 <a name="Bst"></a>
-## type [Bst](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L15-L17>)
+## type [Bst](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L15-L17>)
 
 Bst represents the binary search tree.
 
@@ -972,7 +972,7 @@ type Bst[T Number] struct {
 ```
 
 <a name="NewBst"></a>
-### func [NewBst](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L20>)
+### func [NewBst](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L20>)
 
 ```go
 func NewBst[T Number]() *Bst[T]
@@ -981,7 +981,7 @@ func NewBst[T Number]() *Bst[T]
 NewBst creates a new binary search tree.
 
 <a name="Bst[T].Contains"></a>
-### func \(\*Bst\[T\]\) [Contains](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L57>)
+### func \(\*Bst\[T\]\) [Contains](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L57>)
 
 ```go
 func (b *Bst[T]) Contains(value T) bool
@@ -990,7 +990,7 @@ func (b *Bst[T]) Contains(value T) bool
 Contains checks whether the given value exists in the binary search tree.
 
 <a name="Bst[T].Insert"></a>
-### func \(\*Bst\[T\]\) [Insert](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L25>)
+### func \(\*Bst\[T\]\) [Insert](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L25>)
 
 ```go
 func (b *Bst[T]) Insert(value T)
@@ -999,7 +999,7 @@ func (b *Bst[T]) Insert(value T)
 Insert adds a new value to the binary search tree.
 
 <a name="Bst[T].Max"></a>
-### func \(\*Bst\[T\]\) [Max](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L85>)
+### func \(\*Bst\[T\]\) [Max](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L85>)
 
 ```go
 func (b *Bst[T]) Max() T
@@ -1008,7 +1008,7 @@ func (b *Bst[T]) Max() T
 Max function returns the maximum value in the binary search tree.
 
 <a name="Bst[T].Min"></a>
-### func \(\*Bst\[T\]\) [Min](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L75>)
+### func \(\*Bst\[T\]\) [Min](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L75>)
 
 ```go
 func (b *Bst[T]) Min() T
@@ -1017,7 +1017,7 @@ func (b *Bst[T]) Min() T
 Min function returns the minimum value in the binary search tree.
 
 <a name="Bst[T].Remove"></a>
-### func \(\*Bst\[T\]\) [Remove](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L64>)
+### func \(\*Bst\[T\]\) [Remove](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L64>)
 
 ```go
 func (b *Bst[T]) Remove(value T) bool
@@ -1026,7 +1026,7 @@ func (b *Bst[T]) Remove(value T) bool
 Remove removes the specified value from the binary search tree and rebalances the tree.
 
 <a name="BstNode"></a>
-## type [BstNode](<https://github.com/cinar/indicator/blob/master/helper/bst.go#L8-L12>)
+## type [BstNode](<https://github.com/jonpastore/indicator/blob/master/helper/bst.go#L8-L12>)
 
 BstNode represents the binary search tree node.
 
@@ -1037,7 +1037,7 @@ type BstNode[T Number] struct {
 ```
 
 <a name="Csv"></a>
-## type [Csv](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L40-L47>)
+## type [Csv](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L40-L47>)
 
 Csv represents the configuration for CSV reader and writer.
 
@@ -1048,7 +1048,7 @@ type Csv[T any] struct {
 ```
 
 <a name="NewCsv"></a>
-### func [NewCsv](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L51>)
+### func [NewCsv](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L51>)
 
 ```go
 func NewCsv[T any](hasHeader bool) (*Csv[T], error)
@@ -1057,7 +1057,7 @@ func NewCsv[T any](hasHeader bool) (*Csv[T], error)
 NewCsv function initializes a new CSV instance. The parameter hasHeader indicates whether the CSV contains a header row.
 
 <a name="Csv[T].AppendToFile"></a>
-### func \(\*Csv\[T\]\) [AppendToFile](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L170>)
+### func \(\*Csv\[T\]\) [AppendToFile](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L170>)
 
 ```go
 func (c *Csv[T]) AppendToFile(fileName string, rows <-chan *T) error
@@ -1066,7 +1066,7 @@ func (c *Csv[T]) AppendToFile(fileName string, rows <-chan *T) error
 AppendToFile appends the provided rows of data to the end of the specified file, creating the file if it doesn't exist. In append mode, the function assumes that the existing file's column order matches the field order of the given row struct to ensure consistent data structure.
 
 <a name="Csv[T].ReadFromFile"></a>
-### func \(\*Csv\[T\]\) [ReadFromFile](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L146>)
+### func \(\*Csv\[T\]\) [ReadFromFile](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L146>)
 
 ```go
 func (c *Csv[T]) ReadFromFile(fileName string) (<-chan *T, error)
@@ -1075,7 +1075,7 @@ func (c *Csv[T]) ReadFromFile(fileName string) (<-chan *T, error)
 ReadFromFile parses the CSV data from the provided file name, maps the data to corresponding struct fields, and delivers the resulting rows through the channel.
 
 <a name="Csv[T].ReadFromReader"></a>
-### func \(\*Csv\[T\]\) [ReadFromReader](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L91>)
+### func \(\*Csv\[T\]\) [ReadFromReader](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L91>)
 
 ```go
 func (c *Csv[T]) ReadFromReader(reader io.Reader) <-chan *T
@@ -1084,7 +1084,7 @@ func (c *Csv[T]) ReadFromReader(reader io.Reader) <-chan *T
 ReadFromReader parses the CSV data from the provided reader, maps the data to corresponding struct fields, and delivers the resulting it through the channel.
 
 <a name="Csv[T].WriteToFile"></a>
-### func \(\*Csv\[T\]\) [WriteToFile](<https://github.com/cinar/indicator/blob/master/helper/csv.go#L186>)
+### func \(\*Csv\[T\]\) [WriteToFile](<https://github.com/jonpastore/indicator/blob/master/helper/csv.go#L186>)
 
 ```go
 func (c *Csv[T]) WriteToFile(fileName string, rows <-chan *T) error
@@ -1093,7 +1093,7 @@ func (c *Csv[T]) WriteToFile(fileName string, rows <-chan *T) error
 WriteToFile creates a new file with the given name and writes the provided rows of data to it, overwriting any existing content.
 
 <a name="Float"></a>
-## type [Float](<https://github.com/cinar/indicator/blob/master/helper/helper.go#L27-L29>)
+## type [Float](<https://github.com/jonpastore/indicator/blob/master/helper/helper.go#L27-L29>)
 
 Float refers to any float type.
 
@@ -1104,7 +1104,7 @@ type Float interface {
 ```
 
 <a name="Integer"></a>
-## type [Integer](<https://github.com/cinar/indicator/blob/master/helper/helper.go#L22-L24>)
+## type [Integer](<https://github.com/jonpastore/indicator/blob/master/helper/helper.go#L22-L24>)
 
 Integer refers to any integer type.
 
@@ -1115,7 +1115,7 @@ type Integer interface {
 ```
 
 <a name="Number"></a>
-## type [Number](<https://github.com/cinar/indicator/blob/master/helper/helper.go#L32-L34>)
+## type [Number](<https://github.com/jonpastore/indicator/blob/master/helper/helper.go#L32-L34>)
 
 Number refers to any numeric type.
 
@@ -1126,7 +1126,7 @@ type Number interface {
 ```
 
 <a name="Report"></a>
-## type [Report](<https://github.com/cinar/indicator/blob/master/helper/report.go#L48-L55>)
+## type [Report](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L48-L55>)
 
 Report generates an HTML file containing an interactive chart that visually represents the provided data and annotations.
 
@@ -1144,7 +1144,7 @@ type Report struct {
 ```
 
 <a name="NewReport"></a>
-### func [NewReport](<https://github.com/cinar/indicator/blob/master/helper/report.go#L60>)
+### func [NewReport](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L60>)
 
 ```go
 func NewReport(title string, date <-chan time.Time) *Report
@@ -1153,7 +1153,7 @@ func NewReport(title string, date <-chan time.Time) *Report
 NewReport takes a channel of time as the time axis and returns a new instance of the Report struct. This instance can later be used to add data and annotations and subsequently generate a report.
 
 <a name="Report.AddChart"></a>
-### func \(\*Report\) [AddChart](<https://github.com/cinar/indicator/blob/master/helper/report.go#L76>)
+### func \(\*Report\) [AddChart](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L76>)
 
 ```go
 func (r *Report) AddChart() int
@@ -1162,7 +1162,7 @@ func (r *Report) AddChart() int
 AddChart adds a new chart to the report and returns its unique identifier. This identifier can be used later to refer to the chart and add columns to it.
 
 <a name="Report.AddColumn"></a>
-### func \(\*Report\) [AddColumn](<https://github.com/cinar/indicator/blob/master/helper/report.go#L83>)
+### func \(\*Report\) [AddColumn](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L83>)
 
 ```go
 func (r *Report) AddColumn(column ReportColumn, charts ...int)
@@ -1171,7 +1171,7 @@ func (r *Report) AddColumn(column ReportColumn, charts ...int)
 AddColumn adds a new data column to the specified charts. If no chart is specified, it will be added to the main chart.
 
 <a name="Report.WriteToFile"></a>
-### func \(\*Report\) [WriteToFile](<https://github.com/cinar/indicator/blob/master/helper/report.go#L111>)
+### func \(\*Report\) [WriteToFile](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L111>)
 
 ```go
 func (r *Report) WriteToFile(fileName string) error
@@ -1180,7 +1180,7 @@ func (r *Report) WriteToFile(fileName string) error
 WriteToFile writes the generated report content to a file with the specified name. This allows users to conveniently save the report for later viewing or analysis.
 
 <a name="Report.WriteToWriter"></a>
-### func \(\*Report\) [WriteToWriter](<https://github.com/cinar/indicator/blob/master/helper/report.go#L99>)
+### func \(\*Report\) [WriteToWriter](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L99>)
 
 ```go
 func (r *Report) WriteToWriter(writer io.Writer) error
@@ -1189,7 +1189,7 @@ func (r *Report) WriteToWriter(writer io.Writer) error
 WriteToWriter writes the report content to the provided io.Writer. This allows the report to be sent to various destinations, such as a file, a network socket, or even the standard output.
 
 <a name="ReportColumn"></a>
-## type [ReportColumn](<https://github.com/cinar/indicator/blob/master/helper/report.go#L28-L40>)
+## type [ReportColumn](<https://github.com/jonpastore/indicator/blob/master/helper/report.go#L28-L40>)
 
 ReportColumn defines the interface that all report data columns must implement. This interface ensures that different types of data columns can be used consistently within the report generation process.
 
@@ -1210,7 +1210,7 @@ type ReportColumn interface {
 ```
 
 <a name="NewAnnotationReportColumn"></a>
-### func [NewAnnotationReportColumn](<https://github.com/cinar/indicator/blob/master/helper/annotation_report_column.go#L16>)
+### func [NewAnnotationReportColumn](<https://github.com/jonpastore/indicator/blob/master/helper/annotation_report_column.go#L16>)
 
 ```go
 func NewAnnotationReportColumn(values <-chan string) ReportColumn
@@ -1219,7 +1219,7 @@ func NewAnnotationReportColumn(values <-chan string) ReportColumn
 NewAnnotationReportColumn returns a new instance of a annotation column for a report.
 
 <a name="NewNumericReportColumn"></a>
-### func [NewNumericReportColumn](<https://github.com/cinar/indicator/blob/master/helper/numeric_report_column.go#L17>)
+### func [NewNumericReportColumn](<https://github.com/jonpastore/indicator/blob/master/helper/numeric_report_column.go#L17>)
 
 ```go
 func NewNumericReportColumn[T Number](name string, values <-chan T) ReportColumn
@@ -1228,7 +1228,7 @@ func NewNumericReportColumn[T Number](name string, values <-chan T) ReportColumn
 NewNumericReportColumn returns a new instance of a numeric data column for a report.
 
 <a name="Ring"></a>
-## type [Ring](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L18-L23>)
+## type [Ring](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L18-L23>)
 
 Ring represents a ring structure that can be instantiated using the NewRing function.
 
@@ -1250,7 +1250,7 @@ type Ring[T any] struct {
 ```
 
 <a name="NewRing"></a>
-### func [NewRing](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L26>)
+### func [NewRing](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L26>)
 
 ```go
 func NewRing[T any](size int) *Ring[T]
@@ -1259,7 +1259,7 @@ func NewRing[T any](size int) *Ring[T]
 NewRing creates a new ring instance with the given size.
 
 <a name="Ring[T].At"></a>
-### func \(\*Ring\[T\]\) [At](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L71>)
+### func \(\*Ring\[T\]\) [At](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L71>)
 
 ```go
 func (r *Ring[T]) At(index int) T
@@ -1268,7 +1268,7 @@ func (r *Ring[T]) At(index int) T
 At returns the value at the given index.
 
 <a name="Ring[T].Get"></a>
-### func \(\*Ring\[T\]\) [Get](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L53>)
+### func \(\*Ring\[T\]\) [Get](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L53>)
 
 ```go
 func (r *Ring[T]) Get() (T, bool)
@@ -1277,7 +1277,7 @@ func (r *Ring[T]) Get() (T, bool)
 Get retrieves the available value from the ring buffer. If empty, it returns the default value \(T\) and false.
 
 <a name="Ring[T].IsEmpty"></a>
-### func \(\*Ring\[T\]\) [IsEmpty](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L76>)
+### func \(\*Ring\[T\]\) [IsEmpty](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L76>)
 
 ```go
 func (r *Ring[T]) IsEmpty() bool
@@ -1286,7 +1286,7 @@ func (r *Ring[T]) IsEmpty() bool
 IsEmpty checks if the current ring buffer is empty.
 
 <a name="Ring[T].IsFull"></a>
-### func \(\*Ring\[T\]\) [IsFull](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L81>)
+### func \(\*Ring\[T\]\) [IsFull](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L81>)
 
 ```go
 func (r *Ring[T]) IsFull() bool
@@ -1295,7 +1295,7 @@ func (r *Ring[T]) IsFull() bool
 IsFull checks if the current ring buffer is full.
 
 <a name="Ring[T].Put"></a>
-### func \(\*Ring\[T\]\) [Put](<https://github.com/cinar/indicator/blob/master/helper/ring.go#L37>)
+### func \(\*Ring\[T\]\) [Put](<https://github.com/jonpastore/indicator/blob/master/helper/ring.go#L37>)
 
 ```go
 func (r *Ring[T]) Put(t T) T

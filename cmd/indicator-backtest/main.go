@@ -1,6 +1,6 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 // main is the indicator backtest command line program.
 package main
@@ -11,13 +11,13 @@ import (
 	"log"
 	"os"
 
-	"github.com/cinar/indicator/v2/asset"
-	"github.com/cinar/indicator/v2/backtest"
-	"github.com/cinar/indicator/v2/strategy"
-	"github.com/cinar/indicator/v2/strategy/compound"
-	"github.com/cinar/indicator/v2/strategy/momentum"
-	"github.com/cinar/indicator/v2/strategy/trend"
-	"github.com/cinar/indicator/v2/strategy/volatility"
+	"github.com/jonpastore/indicator/v2/asset"
+	"github.com/jonpastore/indicator/v2/backtest"
+	"github.com/jonpastore/indicator/v2/strategy"
+	"github.com/jonpastore/indicator/v2/strategy/compound"
+	"github.com/jonpastore/indicator/v2/strategy/momentum"
+	"github.com/jonpastore/indicator/v2/strategy/trend"
+	"github.com/jonpastore/indicator/v2/strategy/volatility"
 )
 
 func main() {
@@ -33,7 +33,7 @@ func main() {
 	fmt.Fprintln(os.Stderr, "Indicator Backtest")
 	fmt.Fprintln(os.Stderr, "Copyright (c) 2021-2024 Onur Cinar.")
 	fmt.Fprintln(os.Stderr, "The source code is provided under GNU AGPLv3 License.")
-	fmt.Fprintln(os.Stderr, "https://github.com/cinar/indicator")
+	fmt.Fprintln(os.Stderr, "https://github.com/jonpastore/indicator")
 	fmt.Fprintln(os.Stderr)
 
 	flag.StringVar(&repositoryName, "repository-name", "filesystem", "repository name")

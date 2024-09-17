@@ -23,4 +23,4 @@ jobs:
         with:
           branch: 'cla-signatures'
           path-to-signatures: 'signatures/version1/cla.json'
-          path-to-document: 'https://github.com/cinar/indicator/blob/master/CLA.md' # e.g. a CLA or a DCO document
+          path-to-document: 'https://github.com/jonpastore/indicator/blob/master/CLA.md' # e.g. a CLA or a DCO document

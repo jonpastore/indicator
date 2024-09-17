@@ -1,10 +1,10 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 package trend
 
-import "github.com/cinar/indicator/v2/helper"
+import "github.com/jonpastore/indicator/v2/helper"
 
 // Dema represents the parameters for calculating the Double Exponential Moving Average (DEMA).
 // A bullish cross occurs when DEMA with 5 days period moves above DEMA with 35 days period.

@@ -3,7 +3,7 @@
 # backtest
 
 ```go
-import "github.com/cinar/indicator/v2/backtest"
+import "github.com/jonpastore/indicator/v2/backtest"
 ```
 
 Package backtest contains the backtest functions.
@@ -15,7 +15,7 @@ This package belongs to the Indicator project. Indicator is a Golang module that
 ```
 Copyright (c) 2021-2024 Onur Cinar.
 The source code is provided under GNU AGPLv3 License.
-https://github.com/cinar/indicator
+https://github.com/jonpastore/indicator
 ```
 
 ### Disclaimer
@@ -82,7 +82,7 @@ const (
 ```
 
 <a name="RegisterReportBuilder"></a>
-## func [RegisterReportBuilder](<https://github.com/cinar/indicator/blob/master/backtest/report_factory.go#L25>)
+## func [RegisterReportBuilder](<https://github.com/jonpastore/indicator/blob/master/backtest/report_factory.go#L25>)
 
 ```go
 func RegisterReportBuilder(name string, builder ReportBuilderFunc)
@@ -91,7 +91,7 @@ func RegisterReportBuilder(name string, builder ReportBuilderFunc)
 RegisterReportBuilder registers the given builder.
 
 <a name="Backtest"></a>
-## type [Backtest](<https://github.com/cinar/indicator/blob/master/backtest/backtest.go#L43-L61>)
+## type [Backtest](<https://github.com/jonpastore/indicator/blob/master/backtest/backtest.go#L43-L61>)
 
 Backtest function rigorously evaluates the potential performance of the specified strategies applied to a defined set of assets. It generates comprehensive visual representations for each strategy\-asset pairing.
 
@@ -114,7 +114,7 @@ type Backtest struct {
 ```
 
 <a name="NewBacktest"></a>
-### func [NewBacktest](<https://github.com/cinar/indicator/blob/master/backtest/backtest.go#L64>)
+### func [NewBacktest](<https://github.com/jonpastore/indicator/blob/master/backtest/backtest.go#L64>)
 
 ```go
 func NewBacktest(repository asset.Repository, report Report) *Backtest
@@ -123,7 +123,7 @@ func NewBacktest(repository asset.Repository, report Report) *Backtest
 NewBacktest function initializes a new backtest instance.
 
 <a name="Backtest.Run"></a>
-### func \(\*Backtest\) [Run](<https://github.com/cinar/indicator/blob/master/backtest/backtest.go#L79>)
+### func \(\*Backtest\) [Run](<https://github.com/jonpastore/indicator/blob/master/backtest/backtest.go#L79>)
 
 ```go
 func (b *Backtest) Run() error
@@ -132,7 +132,7 @@ func (b *Backtest) Run() error
 Run executes a comprehensive performance evaluation of the designated strategies, applied to a specified collection of assets. In the absence of explicitly defined assets, encompasses all assets within the repository. Likewise, in the absence of explicitly defined strategies, encompasses all the registered strategies.
 
 <a name="DataReport"></a>
-## type [DataReport](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L32-L35>)
+## type [DataReport](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L32-L35>)
 
 DataReport is the bactest data report enablign programmatic access to the backtest results.
 
@@ -144,7 +144,7 @@ type DataReport struct {
 ```
 
 <a name="NewDataReport"></a>
-### func [NewDataReport](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L38>)
+### func [NewDataReport](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L38>)
 
 ```go
 func NewDataReport() *DataReport
@@ -153,7 +153,7 @@ func NewDataReport() *DataReport
 NewDataReport initializes a new data report instance.
 
 <a name="DataReport.AssetBegin"></a>
-### func \(\*DataReport\) [AssetBegin](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L50>)
+### func \(\*DataReport\) [AssetBegin](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L50>)
 
 ```go
 func (d *DataReport) AssetBegin(name string, strategies []strategy.Strategy) error
@@ -162,7 +162,7 @@ func (d *DataReport) AssetBegin(name string, strategies []strategy.Strategy) err
 AssetBegin is called when backtesting for the given asset begins.
 
 <a name="DataReport.AssetEnd"></a>
-### func \(\*DataReport\) [AssetEnd](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L79>)
+### func \(\*DataReport\) [AssetEnd](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L79>)
 
 ```go
 func (*DataReport) AssetEnd(_ string) error
@@ -171,7 +171,7 @@ func (*DataReport) AssetEnd(_ string) error
 AssetEnd is called when backtesting for the given asset ends.
 
 <a name="DataReport.Begin"></a>
-### func \(\*DataReport\) [Begin](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L45>)
+### func \(\*DataReport\) [Begin](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L45>)
 
 ```go
 func (*DataReport) Begin(_ []string, _ []strategy.Strategy) error
@@ -180,7 +180,7 @@ func (*DataReport) Begin(_ []string, _ []strategy.Strategy) error
 Begin is called when the backtest begins.
 
 <a name="DataReport.End"></a>
-### func \(\*DataReport\) [End](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L84>)
+### func \(\*DataReport\) [End](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L84>)
 
 ```go
 func (*DataReport) End() error
@@ -189,7 +189,7 @@ func (*DataReport) End() error
 End is called when the backtest ends.
 
 <a name="DataReport.Write"></a>
-### func \(\*DataReport\) [Write](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L56>)
+### func \(\*DataReport\) [Write](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L56>)
 
 ```go
 func (d *DataReport) Write(assetName string, currentStrategy strategy.Strategy, snapshots <-chan *asset.Snapshot, actions <-chan strategy.Action, outcomes <-chan float64) error
@@ -198,7 +198,7 @@ func (d *DataReport) Write(assetName string, currentStrategy strategy.Strategy, 
 Write writes the given strategy actions and outomes to the report.
 
 <a name="DataStrategyResult"></a>
-## type [DataStrategyResult](<https://github.com/cinar/indicator/blob/master/backtest/data_report.go#L14-L29>)
+## type [DataStrategyResult](<https://github.com/jonpastore/indicator/blob/master/backtest/data_report.go#L14-L29>)
 
 DataStrategyResult is the strategy result.
 
@@ -222,7 +222,7 @@ type DataStrategyResult struct {
 ```
 
 <a name="HTMLReport"></a>
-## type [HTMLReport](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L36-L53>)
+## type [HTMLReport](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L36-L53>)
 
 HTMLReport is the backtest HTML report.
 
@@ -240,7 +240,7 @@ type HTMLReport struct {
 ```
 
 <a name="NewHTMLReport"></a>
-### func [NewHTMLReport](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L77>)
+### func [NewHTMLReport](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L77>)
 
 ```go
 func NewHTMLReport(outputDir string) *HTMLReport
@@ -249,7 +249,7 @@ func NewHTMLReport(outputDir string) *HTMLReport
 NewHTMLReport initializes a new HTML report instance.
 
 <a name="HTMLReport.AssetBegin"></a>
-### func \(\*HTMLReport\) [AssetBegin](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L100>)
+### func \(\*HTMLReport\) [AssetBegin](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L100>)
 
 ```go
 func (h *HTMLReport) AssetBegin(name string, strategies []strategy.Strategy) error
@@ -258,7 +258,7 @@ func (h *HTMLReport) AssetBegin(name string, strategies []strategy.Strategy) err
 AssetBegin is called when backtesting for the given asset begins.
 
 <a name="HTMLReport.AssetEnd"></a>
-### func \(\*HTMLReport\) [AssetEnd](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L155>)
+### func \(\*HTMLReport\) [AssetEnd](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L155>)
 
 ```go
 func (h *HTMLReport) AssetEnd(name string) error
@@ -267,7 +267,7 @@ func (h *HTMLReport) AssetEnd(name string) error
 AssetEnd is called when backtesting for the given asset ends.
 
 <a name="HTMLReport.Begin"></a>
-### func \(\*HTMLReport\) [Begin](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L87>)
+### func \(\*HTMLReport\) [Begin](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L87>)
 
 ```go
 func (h *HTMLReport) Begin(assetNames []string, _ []strategy.Strategy) error
@@ -276,7 +276,7 @@ func (h *HTMLReport) Begin(assetNames []string, _ []strategy.Strategy) error
 Begin is called when the backtest starts.
 
 <a name="HTMLReport.End"></a>
-### func \(\*HTMLReport\) [End](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L184>)
+### func \(\*HTMLReport\) [End](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L184>)
 
 ```go
 func (h *HTMLReport) End() error
@@ -285,7 +285,7 @@ func (h *HTMLReport) End() error
 End is called when the backtest ends.
 
 <a name="HTMLReport.Write"></a>
-### func \(\*HTMLReport\) [Write](<https://github.com/cinar/indicator/blob/master/backtest/html_report.go#L112>)
+### func \(\*HTMLReport\) [Write](<https://github.com/jonpastore/indicator/blob/master/backtest/html_report.go#L112>)
 
 ```go
 func (h *HTMLReport) Write(assetName string, currentStrategy strategy.Strategy, snapshots <-chan *asset.Snapshot, actions <-chan strategy.Action, outcomes <-chan float64) error
@@ -294,7 +294,7 @@ func (h *HTMLReport) Write(assetName string, currentStrategy strategy.Strategy, 
 Write writes the given strategy actions and outomes to the report.
 
 <a name="Report"></a>
-## type [Report](<https://github.com/cinar/indicator/blob/master/backtest/report.go#L13-L28>)
+## type [Report](<https://github.com/jonpastore/indicator/blob/master/backtest/report.go#L13-L28>)
 
 Report is the backtest report interface.
 
@@ -318,7 +318,7 @@ type Report interface {
 ```
 
 <a name="NewReport"></a>
-### func [NewReport](<https://github.com/cinar/indicator/blob/master/backtest/report_factory.go#L30>)
+### func [NewReport](<https://github.com/jonpastore/indicator/blob/master/backtest/report_factory.go#L30>)
 
 ```go
 func NewReport(name, config string) (Report, error)
@@ -327,7 +327,7 @@ func NewReport(name, config string) (Report, error)
 NewReport builds a new report by the given name type and the configuration.
 
 <a name="ReportBuilderFunc"></a>
-## type [ReportBuilderFunc](<https://github.com/cinar/indicator/blob/master/backtest/report_factory.go#L17>)
+## type [ReportBuilderFunc](<https://github.com/jonpastore/indicator/blob/master/backtest/report_factory.go#L17>)
 
 ReportBuilderFunc defines a function to build a new report using the given configuration parameter.
 

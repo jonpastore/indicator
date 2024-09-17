@@ -1,10 +1,10 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 package strategy
 
-import "github.com/cinar/indicator/v2/helper"
+import "github.com/jonpastore/indicator/v2/helper"
 
 // Outcome simulates the potential result of executing the given actions based on the provided values.
 func Outcome[T helper.Number](values <-chan T, actions <-chan Action) <-chan float64 {

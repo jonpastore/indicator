@@ -1,4 +1,4 @@
-[![GoDoc](https://godoc.org/github.com/cinar/indicator/v2?status.svg)](https://godoc.org/github.com/cinar/indicator/v2) [![License](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://opensource.org/licenses/AGPLv3) [![Go Report Card](https://goreportcard.com/badge/github.com/cinar/indicator/v2)](https://goreportcard.com/report/github.com/cinar/indicator/v2) ![Go CI](https://github.com/cinar/indicator/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/cinar/indicator/graph/badge.svg?token=MB7L69UAWM)](https://codecov.io/gh/cinar/indicator)
+[![GoDoc](https://godoc.org/github.com/jonpastore/indicator/v2?status.svg)](https://godoc.org/github.com/jonpastore/indicator/v2) [![License](https://img.shields.io/badge/License-AGPLv3-blue.svg)](https://opensource.org/licenses/AGPLv3) [![Go Report Card](https://goreportcard.com/badge/github.com/jonpastore/indicator/v2)](https://goreportcard.com/report/github.com/jonpastore/indicator/v2) ![Go CI](https://github.com/jonpastore/indicator/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/cinar/indicator/graph/badge.svg?token=MB7L69UAWM)](https://codecov.io/gh/cinar/indicator)
 
 Indicator Go
 ============
@@ -9,11 +9,11 @@ Indicator is a Golang module that provides a rich set of technical analysis indi
 
 -	**Enhanced Code Quality:** A complete rewrite was undertaken to achieve and maintain at least 90% code coverage.
 -	**Improved Testability:** Each indicator and strategy have dedicated test data in CSV format for easier validation.
--	**Streamlined Data Handling:** The library was rewritten to operate on data streams (Go channels) for both inputs and outputs. If you prefer using slices, helper functions like [helper.SliceToChan](helper/README.md#func-slicetochan) and [helper.ChanToSlice](helper/README.md#func-chantoslice) are available. Alternatively, you can still use the [v1 version](https://github.com/cinar/indicator/tree/v1).
+-	**Streamlined Data Handling:** The library was rewritten to operate on data streams (Go channels) for both inputs and outputs. If you prefer using slices, helper functions like [helper.SliceToChan](helper/README.md#func-slicetochan) and [helper.ChanToSlice](helper/README.md#func-chantoslice) are available. Alternatively, you can still use the [v1 version](https://github.com/jonpastore/indicator/tree/v1).
 -	**Configurable Indicators and Strategies:** All indicators and strategies were designed to be fully configurable with no preset values.
 -	**Generics Support:** The library leverages Golang generics to support various numeric data formats.
 
-I also have a TypeScript version of this module now at [Indicator TS](https://github.com/cinar/indicatorts).
+I also have a TypeScript version of this module now at [Indicator TS](https://github.com/jonpastore/indicatorts).
 
 👆 Indicators Provided
 ----------------------
@@ -170,7 +170,7 @@ The following [repository implementations](asset/README.md#type-repository) are 
 -	[File System Repository](asset/README.md#type-filesystemrepository)
 -	[In Memory Repository](asset/README.md#type-inmemoryrepository)
 -	[Tiingo Repository](asset/README.md#type-tiingorepository)
--	[Alpaca Markets Repository](https://github.com/cinar/indicatoralpaca)
+-	[Alpaca Markets Repository](https://github.com/jonpastore/indicatoralpaca)
 
 The [Sync function]() facilitates the synchronization of assets between designated source and target repositories by employing multi-worker concurrency for enhanced efficiency. This function serves the purpose of procuring the most recent snapshots from remote repositories and seamlessly transferring them to local repositories, such as file system repositories.
 
@@ -219,14 +219,14 @@ Usage
 Install package.
 
 ```bash
-go get github.com/cinar/indicator/v2
+go get github.com/jonpastore/indicator/v2
 ```
 
 Import indicator.
 
 ```Golang
 import (
-    "github.com/cinar/indicator/v2"
+    "github.com/jonpastore/indicator/v2"
 )
 ```
 

@@ -1,15 +1,15 @@
 // Copyright (c) 2021-2024 Onur Cinar.
 // The source code is provided under GNU AGPLv3 License.
-// https://github.com/cinar/indicator
+// https://github.com/jonpastore/indicator
 
 package decorator
 
 import (
 	"fmt"
 
-	"github.com/cinar/indicator/v2/asset"
-	"github.com/cinar/indicator/v2/helper"
-	"github.com/cinar/indicator/v2/strategy"
+	"github.com/jonpastore/indicator/v2/asset"
+	"github.com/jonpastore/indicator/v2/helper"
+	"github.com/jonpastore/indicator/v2/strategy"
 )
 
 // InverseStrategy reverses the advice of another strategy. For example, if the original strategy suggests buying an
